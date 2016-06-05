@@ -1,0 +1,63 @@
+
+### crucial
+
+1. does the main point of the figure "pop-out" to your audience (note: answering this question successfully requires knowing precisely what the main point is, and who your audience is.)?
+2. is there any way to reduce cognitive load for the audience, and still make the same point?
+
+### clutter:
+
+1. unnecessary borders?
+2. unnecessary gridlines?
+3. unnecessary data markers?
+4. axis labels as simple as possible?
+5. data labeled directly if possible?
+6. is there sufficient whitespace?
+
+### color:
+
+1. is color use consistent (within and across figures?
+2. can colorblind people see it (use colororacle.org)?
+3. are any colors offensive (check http://www.informationisbeautiful.net/visualizations/colours-in-cultures/)?
+4. is brand palette being used?
+
+### affordances:
+
+1. is all data present critical?
+2. can any data present be summarized effectively?
+3. can anything be removed?
+4. is anything that is not primary in the background?
+
+
+### bar charts:
+
+1. does the y-axis start at zero?  
+
+### text:
+
+1. Are all axes are labeled?
+2. Do all axis labels have units?
+3. Are all font sizes at least the size of the text font in the of the document?
+4. Are all lines labeled? If so, can they be labeled directly, rather than in a legend?
+5. Is your method named something other than ‘proposed method’ or 'our method’? If not, name it and use it throughout.
+6. Are all the letters/numbers fully visible (i.e., not obscured by part of the figure)?
+7. can the language be simplified?
+8. is there a title? does it provide context (rather than naming the axes again, eg, the name of the dataset or simulation)?
+
+### caption:
+
+1. Does the caption begin with a sentence (fragment) stating what the figure is demonstrating (i.e., why it is there)?  
+2. Does the caption define all acronyms used in the figure (especially if they are not used anywhere else)?
+3. Does the caption end by pointing out particularly interesting aspects of the figure that one should note?
+
+### basics:
+
+3. If there is 1 color, is it the default color (probably gray, so that black can be used for emphasis)? 
+4. If there are multiple lines/dots, is each a different line style and color?
+5. Are all lines sufficiently thick? (If you used matlab, and they are the default thickness, the answer is no.)
+6. Are all markers clearly different?
+7. Are the colors clearly different?
+10. If errorbars make sense, are they there?  If there, does the caption explain whether they are standard error? If they are not there, is there a good justification provided for that?
+12. Are you axes 'tight’ (that is, are the bounds of the axes just larger than the max and min of what you want to show)? If not, do you have good reason for the excess?
+13. Are all graphics that can be vector graphics actually vector graphics? 
+15. Is the aspect ratio correct? (Hint: if you rescaled both the width and height separately, it is probably not.)
+16. If the data are 2D, are you displaying it in 2D? (If not, remove that additional 3rd dimension, it is just confusing and obfuscatory.)
