@@ -17,8 +17,7 @@
 
 1. is color use consistent (within and across figures?
 2. can colorblind people see it (use colororacle.org)?
-3. are any colors offensive (check http://www.informationisbeautiful.net/visualizations/colours-in-cultures/)?
-4. is brand palette being used?
+4. is brand palette being used appropriately?
 
 ### affordances:
 
@@ -61,3 +60,4 @@
 13. Are all graphics that can be vector graphics actually vector graphics? 
 15. Is the aspect ratio correct? (Hint: if you rescaled both the width and height separately, it is probably not.)
 16. If the data are 2D, are you displaying it in 2D? (If not, remove that additional 3rd dimension, it is just confusing and obfuscatory.)
+17. is anything not aligned that could be aligned?
