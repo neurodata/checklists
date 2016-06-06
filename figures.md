@@ -27,9 +27,6 @@
 4. is anything that is not primary in the background?
 
 
-### bar charts:
-
-1. does the y-axis start at zero?  
 
 ### text:
 
@@ -61,3 +58,5 @@
 15. Is the aspect ratio correct? (Hint: if you rescaled both the width and height separately, it is probably not.)
 16. If the data are 2D, are you displaying it in 2D? (If not, remove that additional 3rd dimension, it is just confusing and obfuscatory.)
 17. is anything not aligned that could be aligned?
+18. if its a bar chart, does the y-axis start at zero?  
+19. if its a pie chart, can you replace it with a stacked barchart (or something else)?
