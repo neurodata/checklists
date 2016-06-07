@@ -1,3 +1,8 @@
+the following checklist is for *explanatory figures*, which is a special class of figures.
+other kinds of figures include "exploratory" and "schematic", which have somewhat different guidelines.
+we'll make clarify these issues in a future edit.
+
+
 
 ### crucial
 
