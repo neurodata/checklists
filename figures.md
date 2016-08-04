@@ -43,6 +43,7 @@ we'll make clarify these issues in a future edit.
 6. Are all the letters/numbers fully visible (i.e., not obscured by part of the figure)?
 7. can the language be simplified?
 8. is there a title? does it provide context (rather than naming the axes again, eg, the name of the dataset or simulation)?
+9. Is everything that is "latexable" (like greek letters, subscripts, etc.) "latexed" (in other words, don't ever write "alpha" or "_")?
 
 ### caption:
 
