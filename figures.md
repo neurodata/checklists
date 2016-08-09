@@ -23,6 +23,7 @@ we'll make clarify these issues in a future edit.
 1. is color use consistent (within and across figures?
 2. can colorblind people see it (use colororacle.org)?
 4. is brand palette being used appropriately?
+5. is each different color use justified?
 
 ### affordances:
 
