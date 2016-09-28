@@ -39,6 +39,7 @@
 7. Scree plot (with elbows)
 
 (not sure yet about this)
+
 6. Correlation matrix of features
 8. "Pairs plots" of 2D kernel density estimates for top ~8 dimensions
 9. mclust for k=1,...10 for all 10 models, plot BIC curves
