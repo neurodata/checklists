@@ -36,11 +36,7 @@
 3. Heat map of randomly selected 1,000 dimensions of raw data
 4. Violin plots of randomly selected ~100 dimension
 5. Outlier plot
-7. Scree plot (with elbows)
-
-(not sure yet about this)
-
-6. Correlation matrix of features
-8. "Pairs plots" of 2D kernel density estimates for top ~8 dimensions
-9. mclust for k=1,...10 for all 10 models, plot BIC curves
+6. Scree plot (with elbows)
+7. "Pairs plots" of data after embedded into the top ~8 dimensions
+8. mclust for k=1,...10 for all 10 models, plot BIC curves, using the dimension chosen by ZG(2)
 10. draw voronoi diagram overlaid on "pairs plots"
