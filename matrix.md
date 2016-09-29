@@ -2,8 +2,8 @@
 
 ###  if n<1000, d<100:
 
-1. For 1 sample, how many kinds of features of each kind (binary, integer, non-negative, character, string etc.)
-2. For two different samples, how many NaNs for each? Infs?
+1. What fraction of features of each kind (binary, integer, non-negative, character, string etc.)
+2. What is the distribution of NaNs per row? Per column? Infs per row? Per column?
 3. Heat map of raw data
 4. Violin plots of each dimension
 5. Outlier plot
@@ -17,8 +17,8 @@
 
 ### if n>>1000, d<100:
 
-1. For 1 sample, how many kinds of features of each kind (binary, integer, non-negative, character, string etc.)
-2. For two different samples, how many NaNs for each? Infs?
+1. What fraction of features of each kind (binary, integer, non-negative, character, string etc.)
+2. What is the distribution of NaNs per row? Per column? Infs per row? Per column?
 3. Heat map of randomly selected 1,000 samples of raw data
 4. Violin plots of each dimension
 5. Outlier plot
@@ -31,8 +31,8 @@
 
 ### if n<1000, d>>100:
 
-1. For 1 sample, what fraction of features are of each kind (binary, integer, non-negative, character, string etc.)
-2. For two different samples, what fraction of NaNs? Infs?
+1. What fraction of features of each kind (binary, integer, non-negative, character, string etc.)
+2. What is the distribution of NaNs per row? Per column? Infs per row? Per column?
 3. Heat map of randomly selected 1,000 dimensions of raw data
 4. Violin plots of randomly selected ~100 dimension
 5. Outlier plot
@@ -45,8 +45,8 @@
 
 ### if n>>1000, d>>100:
 
-1. For 1 sample, what fraction of features are of each kind (binary, integer, non-negative, character, string etc.)
-2. For two different samples, what fraction of NaNs? Infs?
+1. What fraction of features of each kind (binary, integer, non-negative, character, string etc.)
+2. What is the distribution of NaNs per row? Per column? Infs per row? Per column?
 3. Heat map of randomly selected 1,000 dimensions of ~1000 random samples of data
 4. Violin plots of randomly selected ~100 dimensions
 5. Outlier plot
