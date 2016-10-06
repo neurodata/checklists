@@ -1,0 +1,134 @@
+---
+title: "Timeseries Basics"
+author: "Eric Bridgeford"
+date: "October 5, 2016"
+output: html_document
+---
+
+## Loading in Your Data
+
+As a new R user, users will immediately realize that, while somewhat intuitive, there are many quirks to R that can make entry not quite as smooth as other languages. The data formats are often moderately confusing at best, and often times as a beginner you are left out on your own sifting through CRAN manuals trying to figure out why there are 40 different ply functions and none of them do what you want. Rest assured, I've been there and done that, and hopefully with a little tutorial series you can get up to speed a lot faster than I did. 
+
+Let's go through a few functions to see some exploratory analysis we can do with our timeseries. To begin, let's load in some sample data. Our first dimension, here, is the brain region of interest, while the second is the timestep:
+
+```{r }
+  test = readRDS('test.rds')
+  print(dim(test))
+```
+Here, we can see that we have loaded some timeseries data. We have printed its dimensions, which are a vector in this case. To begin, let's find some easy ways to visualize our data. To begin, we need to have a basic understanding of the ggplot2 framework, which requires some knowledge of the reshape framework as well.
+
+### Reshape Overview
+
+Essentially, the reshape framework provides R users a somewhat (read: not at all if you're a beginner!) intuitive way to move between normal data types (ie, vectors, arrays, matrices, etc) and more R-specialized data types (ie, lists, data frames, etc). As our test is currently an array (70x240), to do any exploratory plotting, we need to get it into a format that ggplot knows how to use. In this case, that will be the data frame:
+```{r }
+  require('reshape2') # source the library
+  data_frame_test = melt(test) # use the melt command to go from array to data frame
+  names(data_frame_test) = c("ROI","Time", "Value") # change the data frame's column names
+  print(data_frame_test[1:5,]) # print a subset of the data frame
+```
+
+Essentially, the melt function (part of reshape) will simply reduce our array dimension wise (ie, list all of the possible values of dimension 1 while dimension 2 is fixed at its first possible value, then list all of the possible values of dimension 1 while dimension 2 is fixed at its second possible value, and so on for all dimensions). Finally, it adds a column onto the end for the actual value that the array takes at the particular point specified. The name command, a feature of data frames, allows us to rename these columns for our respective dimensions/values to be something more intuitive. Here, we've renamed the columns to ROI, time, and value. Finally, we print a subset of the data frame, which should give you a better idea of how it works. If you need some more help, play around with printing larger segments.
+
+Next, we'll look at some ways to index data frames.
+
+```{r }
+  print(data_frame_test$ROI[1:5])
+```
+
+Using the dollar sign let's us index by columns in our data frame. Here, we print the ROI column, and the first five rows corresponding exactly to the ones we previously printed. In R, proper code organization should take advantage of these easy vector operations. R is optimized for matrix speed, and the more you exploit these seemingly simple observations the more you will realize how truly powerful R is.
+
+Let's look at a more complex example. First, let's show that we can use these column operations for indexing:
+
+```{r }
+  print(which(data_frame_test$ROI == 1))
+```
+
+Here, we see that this returns the row ids that correspond to ROI == 1. Let's look some more into how this works:
+
+```{r }
+  print(isTRUE(all.equal(length(which(data_frame_test$ROI == 1)), dim(test)[2])))
+```
+
+Here, we see that we can find exactly which rows of our data frame have corresponding column ROI ids of 1 (there is 1 observation per roi per timestep, so we expect to have a number of rows equal to the number of timesteps). We can chain this column indexing together to subset our data, like this:
+
+```{r }
+  print(isTRUE(all.equal(data_frame_test[which(data_frame_test$ROI == 4 & data_frame_test$Time == 5),]$Value, test[4,5])))
+```
+
+Here, we've essentially showed that our melt does exactly what we said a few minutes ago. We have indexed by both our ROI and Time column, and show that it equals those of our initial input matrix. Compared to a language like python, this makes R code incredibly user friendly and readable once you get up to speed (even if it seems odd now, I promise it gets a lot better). In this example, we simply indexed by the ROIs (which gave us a vector of booleans) and then separately indexed by Timestep (giving us another vector of booleans), and then & them together to get their intersection, and finally get the value of this row of the data frame. We can take large subsets of the data in this way, and can very intuitively break it apart in a readable format (majorly contrasting from most languages). Now, let's try some exploratory analysis, now that we have a slight footing on how the data organization works. 
+
+Let's try making a line plot:
+```{r }
+  require('ggplot2')
+  ggplot(data=data_frame_test, aes(x=Time, y=Value, group=ROI, colour=ROI)) +
+      geom_line(alpha=.1)
+```
+
+Fortunately, ggplot knows how to work with our data frames in a very structured manner. With this simple command, we've passed our y axis label, our x axis label, and our legend, as well as created lines for each ROI, simply using the data frame methodology (essentially, you are just passing the column names that you want to regress out for you x, y, group, etc "aesthetics" of your plot). Next, we'll wrap this in a function, this time taking the original vector:
+
+```{r }
+lineplot <- function(ts, type, xlabel, groupname) {
+  return(ggplot(data=melt(ts), aes(x=Var2, y=value, group=Var1, color=Var1)) +
+      geom_line(alpha=.1) +
+      scale_y_continuous(limits=c(min(ts), max(ts))) +
+      ylab(type) +
+      xlab(xlabel) +
+      ggtitle(paste(type, "for each ROI", sep=" ")) +
+      theme(legend.title=element_text(paste(groupname))))
+}
+```
+
+I'll leave it to you to look up each individual function, but here we inline our melt so that when we call the function in the future, we don't need to pre-melt and adjust our data frame. We make our x, y, and group level aesthetics the defaults for what our item would melt to (you can check what the column names would default to with print(melt(ts)[1,])) and they will be listed at the top). 
+
+```{r }
+  lineplot(test, type="Intensity", xlab="Time", groupname="ROI")
+```
+
+## Correlation Matrix Plotting
+
+Finally, let's look at how to make a simple correlation matrix. 
+
+We use the cor function in R, and note by consulting its manual that it returns the correlation coefficients between the second dimension elements of our input vector. Therefore, because we want the correlations with respect to our first dimension of our test data, we must use the transpose:
+
+```{r }
+  testcor <- cor(t(test)) # correlation of the transpose
+```
+
+Finally, we define our correlation matrix function. We use a similar method to our inlined line plot, however, here we also have a fill for the correlation coefficient of each edge. 
+```{r }
+plot_one_mtx <- function(mtx, textsize=10) {
+  return(ggplot(data = melt(mtx), aes(x=Var1, y=Var2, fill=value)) +
+           geom_tile(color="white") +
+           scale_x_continuous("ROI", breaks=c(1, as.integer(dim(mtx)[1]/2), as.integer(dim(mtx)[1]))) +
+           scale_y_continuous("ROI", breaks=c(1, as.integer(dim(mtx)[2]/2), as.integer(dim(mtx)[2])), trans="reverse") +
+           scale_fill_gradientn(colours=c("blue","green","yellow","orange","red")) +
+           theme(text=element_text(size=textsize)))
+}
+```
+
+```{r }
+  print(plot_one_mtx(testcor))
+```
+
+## Generalized Heat Map
+
+Sometimes, it is useful to view our timeseries data itself as a heat map. In many aspects of neuroscience, for instance, researchers will look at EEG data as a heat map, as they feel this provides more insight into the data than otherwise. Here, we can think of the heat map essentially as just viewing the data on a different plane (Consider all of the lines being right next to each other laterally going into the z axis, and then you simply change axes such that you are looking at the z axis with respect to your original x axis, and you are now looking down on your values). Your values now are intensity scored to a color. 
+
+```{r }
+heat <- function(ts, type, xlabel, ylabel, textsize=10) {
+  return(ggplot(data=melt(ts), aes(x=Var2, y=Var1, fill=value)) +
+      geom_tile(color="white") +
+      scale_fill_gradientn(colors=c("red", "green", "blue"), name=type, limits=c(min(ts), max(ts))) +
+      scale_y_continuous(breaks=c(1,ceiling(dim(ts)[1]/2), dim(ts)[1])) + # comment here
+      ylab(ylabel) +
+      xlab(xlabel) +
+      ggtitle(paste(type, "for each ROI", sep=" ")) +
+      theme(legend.title=element_text(type)))
+}
+
+```
+
+```{r }
+  heat(test, type="Intensity", "Time", "ROI")
+  lineplot(test, type="Intensity", xlab="Time", groupname="ROI")
+```
