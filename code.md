@@ -9,8 +9,9 @@ the structure is always the same:
   3. function name
   4. step-by-step instructions, comments where appropriate
   
-2. show pseudocode to a team-mate, ask them if they understand the input, the output, and the goal
-3. describe simulations (possibly in pseudocode if necessary) that you will write to test the code
+3. describe two simulations (possibly in pseudocode if necessary) that you will write to test the code
+  1. one example for which you believe the algorithm will do well
+  2. one example for which you believe the algorithm will not do well
 4. provide details of parameter values for each simulation setting
 5. choose visualizations for qualitatively evaluating performance
 6. specify metrics for quantitatively evaluating performance
@@ -20,6 +21,11 @@ the structure is always the same:
 10. write qualitative evaluation code
 11. qualitatively evaluate
 12. write quantitative evaluation code
-13. quantitatively evaluate simulations
-14. get real data in exact same format as simulation expects
-15. apply exact same code to real data, generating estimates, qualitative and quantitative results. 
+13. quantitatively evaluate simulations (use >= 10 random repititions, plots *all* results)
+14. document the degree to which your predictions of which situations the algorithm would perform well or not, were accurate, and modify understanding as appropriate. pay particular attention to limitations of the evalation setting (simulation design and assessment criteria)
+14. get 1 real data in exact same format as the simulation
+16. predict performance accuracy of the algorithm
+15. run *exact same code* on real data, generating estimates, qualitative and quantitative results. 
+17. document performance accuracy relative to predictions, modify understanding as appropriate
+16. apply benchmark algorithm also to real data, generating estimates, qualitative and quantitative results.
+17. compare performance, highlighting limitations of these performance.
