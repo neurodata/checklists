@@ -19,9 +19,9 @@ the structure is always the same:
 9. plot simulated data
 10. write algorithm code
 11. write qualitative evaluation code
-12. run + quantitatively evaluate simulations (use >= 10 random repititions, plots *all* results)
-13. qualitatively evaluate
-14. write quantitative evaluation code
+12. write quantitative evaluation code
+13. run + quantitatively evaluate simulations (use >= 10 random repititions, plots *all* results)
+14. qualitatively evaluate
 15. document the degree to which your predictions of which situations the algorithm would perform well or not, were accurate, and modify understanding as appropriate. pay particular attention to limitations of the evalation setting (simulation design and assessment criteria)
 16. get 1 real data in exact same format as the simulation
 17. predict performance accuracy of the algorithm
