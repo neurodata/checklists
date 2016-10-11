@@ -9,7 +9,7 @@ the structure is always the same:
   3. function name
   4. step-by-step instructions, comments where appropriate
   
-3. describe two simulations (possibly in pseudocode if necessary) that you will write to test the code
+3. describe two different simulations settings (not two different ways of running the algorithm) (possibly in pseudocode if necessary) that you will write to test the code
   1. one example for which you believe the algorithm will do well
   2. one example for which you believe the algorithm will not do well
 4. provide details of parameter values for each simulation setting
