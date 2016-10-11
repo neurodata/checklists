@@ -12,6 +12,7 @@
 8. Pairs plots for top ~8 dimensions
 9. mclust++ for k=1,...10 for all 10 models, plot BIC curves
 10. color points in pairs plot by best cluster estimates
+11. hclust with different linkages. 
 
 
 
@@ -55,3 +56,4 @@
 8. Pairs plots of data after embedded into the top ~8 dimensions
 9. mclust++ for k=1,...10 for all 10 models, plot BIC curves, using the dimension chosen by ZG(2)
 10. draw voronoi diagram overlaid on "pairs plots"
+11. random projections
