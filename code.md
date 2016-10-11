@@ -1,5 +1,7 @@
 Follow the following steps to write any new code:
 
+**[Example here](./Tutorials/Python/code_example.ipynb)**
+
 1. write pseudocode as carefully as you can, typically using latex "algorithm" package.  there are several examples here: 
 http://arxiv.org/abs/1609.05148.
 the structure is always the same:
