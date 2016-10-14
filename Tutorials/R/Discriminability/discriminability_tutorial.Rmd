@@ -1,0 +1,231 @@
+---
+title: "Discriminability Tutorial"
+author: "Eric Bridgeford"
+date: "October 14, 2016"
+output: html_document
+header-includes:
+  -\usepackage{amsmath}
+  -\DeclareMathOperator*{\min}{\,min}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Motivation
+
+In many areas that use computational statistics, the first step of exploratory analysis involves various methods to determine the quality of the data gathered. Unsurprisingly, data quality is generally one of the most difficult things to assess. Researchers want data that is both precise and accurate; they want data collected to be robust (taking the measure many times will lead to a similar result), and effecive in measuring what it is supposed to be measuring. The discriminability (Shangsi Wang et al.) provides an intuitive framework for the former; it allows researchers to assess the quality of repeated observations of a measure in relation to the entire population.
+
+## Intuition
+
+Essentially, the discriminability derives from the rather intuitive notion that, if I take several samples from a particular subject, and several samples from another subject, I would expect that the samples from one subject would better match the samples also collected from that subject than from the other subject. While one might expect this to often be the case, in our experience, the opposite is actually true: data is incredibly frequently permuted by outside factors (ie, measurement noise, electrical currents in the room where a measure is taken, or simply poor choice of measurement parameters). Additionally, frequently in data science related fields, researchers will process and post process their data after it is collected, which can further introduce noise to distort the quality of the data to be analyzed. By the time the data is actually used for something like an academic paper, there could even be nothing left of the actual signal the researchers wish to analyze. 
+
+## Basic Statistical Foundation
+
+We won't go too far into the statistics here, but essentially what the discriminability says is as follows:
+
+\begin{equation}
+  x_{n,t} = g_{\psi,t}(f_{\phi,t}(v_n))
+\end{equation}
+
+That is, we take an explicit observation $x_n$ of some latent signal $v_n$ for subject $n$. However, this signal is distorted, first by our measurement distortion ($f_\phi$) and second by our processing options chosen ($g_\psi$). We note that both the measurement and processing distortions are random and unknown (that is, the meausure $x_{n,t}$ taken of latent signal $v_n$ at time $t$ does not necessarily match the signal taken at $t'$, $x_{n, t'}$). In any investigation, we want to find the combinations of measurements as well as processing tools to maximize the reliability of our measures; we want $x_{n, t'}$ and $x_{n, t}$ to be as close as possible to ensure that any claims we make on the data are robust and not simply a factor of noise. 
+
+## Dataset Wide Interpretation
+
+Over the course of an entire dataset, at this point the actual notion of discriminability will probably seem obvious. We first define a few terms:
+
+\begin{equation}
+  \delta_{i, t, t'} = \delta(x_{i, t}, x_{i, t'})
+\end{equation}
+\begin{equation}
+  \delta_{i, i', t, t''} = \delta(x_{i, t}, x_{i', t''})
+\end{equation}
+
+The top equation is simply a way to define the distance between the measures we obtain for a particular subject over the course of several trials (referred to as intra subject), and the second equation is just a way to define the distance of measures between different subjects (referred to as inter subject). 
+
+We define discriminability as:
+
+\begin{equation}
+  D(\psi, \phi) = \mathbb{P}(\delta_{i, t, t'} \leq \delta_{i. i', t, t''})
+\end{equation}
+
+or the probability that the distance of intra subject measures is less than or equal to that of inter subject measures. Finally, we put forth the question that discriminability seeks to answer:
+
+\begin{equation}
+  \max_{\psi, \phi} D(\psi, \phi)
+\end{equation}
+
+That is, what combination of measurement parameters (ie, scanner parameters, measurement device, etc) and processing options (ie, ICA, correlation, etc) will lead to the most discriminable outputs for whatever we are seeking to analyze?
+
+# Code Overview
+
+Now that we have some foundation in the logic behind discriminability, let's get into a basic overview of how it works.
+
+```{r message=FALSE}
+rdf <- function(dist, ids) {
+  N <- dim(dist)[1]
+  if (is.null((N))) {
+    stop('Invalid datatype for N')
+  }
+  
+  uniqids <- unique(as.character(ids))
+  countvec <- vector(mode="numeric",length=length(uniqids))
+  
+  for (i in 1:length(uniqids)) {
+    countvec[i] <- sum(grepl(uniqids[i], ids)) # total number of scans for the particular id
+  }
+  
+  scans <- max(countvec) # assume that we will worst case have the most
+  rdf <- array(NaN, N*(scans-1)) # initialize empty ra
+  
+  count <- 1
+  for (i in 1:N) {
+    ind <- which(grepl(ids[i],ids)) # all the indices that are the same subject, but different scan
+    for (j in ind) { 
+      if (!isTRUE(all.equal(j, i))) { # if j != i, then we want j to have a close distance to i, and estimate where it ranks 
+        di <- dist[i,] # get the entire ra for the particular scan
+        di[ind] <- Inf # don't want to consider the particular scan itself
+        d <- dist[i,j] # the distance between the particular scan of a subject and another scan of the subject
+        rdf[count] <- 1 - (sum(di[!is.nan(di)] < d) + 0.5*sum(di[!is.nan(di)] == d)) / (N-length(ind)) # 1 for less than, .5 if equal, then average
+        count <-  count + 1
+      }
+    }
+  }
+  return(rdf[1:count-1]) # return only the occupied portion
+}
+
+discriminability <- function(rdf, remove_outliers=TRUE, thresh=0, output=FALSE) {
+  if (remove_outliers) {
+    discr <- mean(rdf[which(rdf[!is.nan(rdf)] > thresh)]) # mean of the rdf
+    ol <- length(which(rdf<thresh))
+    if (output) {
+      print(paste('Graphs with reliability <',thresh,'(outliers):', ol))
+    }
+  } else {
+    ol <- 0
+    discr <- mean(rdf[!is.nan(rdf)])
+  }
+  nopair <- length(rdf[is.nan(rdf)])
+  if (output) {
+    print(paste('Graphs with unique ids:',nopair))
+    print(paste('Graphs available for reliability analysis:', length(rdf)-ol-nopair))
+    print(paste('discr:', discr))
+  }
+  return(discr)
+}
+```
+
+Essentially, we define discriminability with two functions. The first is called the reliability density function, or rdf for short. The reliability density function takes some measure on our data (this could be correlation matrices, for instance), calculates pairwise distances between them for all subjects, and then assigns a score based on how distinguishable the intra-subject measures are (ie, do they have a shorter distance, and are correspondingly more similar?) from the inter-subject measures. We repeat for all subjects and scans in our dataset, and then report discriminability as the mean of the rdf. 
+
+## Examples
+
+Let's simulate a very simplified fMRI study to take a look at how the discriminability works. For our first experiment, we will have 2 subjects, each with 2 arbitrarily defined graphs, and show how the discriminability changes:
+
+```{r }
+  nscans = 4
+  nroi = 2
+  nt = 4
+  data <- sapply(1:nscans, function(x) {
+    a = array(0, dim=c(nt, nroi))
+    a[seq(1, nt, 2), 1] = 1
+    a[seq(x %% 2, nt, 2), 2] = 1
+    return (a)
+  }, USE.NAMES=TRUE, simplify=FALSE)
+
+```
+
+Here, we have 4 sets of 4 step timeseries, each with 2 ROIs, where particular observations are either 1 or 0 for a particular ROI. The first and third have the timeseries for each ROI shifting in phase; that is, when one ROI is 1, the other is 1, and vice versa for 0s; the second and fourth have the timeseries for each ROI out of phase; that is, when one ROI has value 1, the other is 0, and vice versa. For these experiments, we will consider the correlation between ROIs as our metric of interest. Let's compute the correlation for each set of observations and plot:
+
+```{r message=FALSE}
+  require('ggplot2')
+  require('reshape2')
+  require('Rmisc')
+  plot_one_mtx <- function(mtx, textsize=10) {
+    return(ggplot(data = melt(mtx), aes(x=Var1, y=Var2, fill=value)) +
+             geom_tile(color="white") +
+             scale_x_continuous("ROI", breaks=c(1, as.integer(dim(mtx)[1]/2), as.integer(dim(mtx)[1]))) +
+             scale_y_continuous("ROI", breaks=c(1, as.integer(dim(mtx)[2]/2), as.integer(dim(mtx)[2])), trans="reverse") +
+             scale_fill_gradientn(name="corr", colours=c("blue","green","yellow","orange","red")) +
+             theme(text=element_text(size=textsize)))
+  }
+  corr <- sapply(data, function(x) cor(x), USE.NAMES=TRUE, simplify=FALSE)
+  corr_plots <- sapply(corr, function(x) plot_one_mtx(x), USE.NAMES=TRUE, simplify=FALSE)
+  multiplot(plotlist = corr_plots, layout = matrix(c(1,2,3,4), nrow=1, byrow=TRUE))
+```
+
+So as we can see, the first and third, as well as second and fourth, pairs of graphs are exactly identical. We define these as our subject labels, and then compute discriminability on them:
+
+```{r }
+  distance <- function(graphs, normx='F') {
+    library("stats")
+    dim_graphs <- dim(graphs) # get the dims of the graphs
+                              # expect dim_graphs[1] to be nrois, dim_graphs[2] to be nois, dim_graphs[3] to be numsubs
+    reshape_graphs <- t(array(graphs, dim=c(dim_graphs[1]*dim_graphs[2], dim_graphs[3])))
+    dist_graphs <- dist(reshape_graphs, diag=TRUE, upper=TRUE) # use stats dist function
+    return(array(matrix(as.matrix(dist_graphs)), dim=c(dim_graphs[3],dim_graphs[3])))
+  }
+
+  graphs <- sapply(corr, function(x) x, USE.NAMES=FALSE, simplify='array')
+  
+  print(discriminability(rdf(distance(graphs), id = c(1,2,1,2))))
+```
+
+As the graphs are identical, we get a perfect discriminability of 1. If we had instead defined our subject labels as the opposite; that is, paired the first and second graphs, and the third and fourth:
+```{r message=FALSE}
+    print(discriminability(rdf(distance(graphs), id = c(1,1,2,2))))
+```
+We get a mnr score of .25; that is, the corresponding within-subject graph is the worst matching graph of the dataset (note that we do not get a value of 0; if we instead had a very large number of subjects, however, we certainly would as the number of subjects approaches infinity). Let's make a better test dataset:
+
+```{r message=FALSE}
+  require('MASS')
+  # Generate some synthetic data
+  nsubs <- 10
+  nscans <- 2 # scans/subject
+  nroi = 10
+  nt = 200
+  latent_signal <- array(0, dim=c(nt, nroi, nsubs*nscans))
+  trials <- c()
+  for (i in 1:nsubs) {
+    # make a random positive semi-def matrix
+    positive_def = rnorm(nroi)
+    positive_def = positive_def %*% t(positive_def)
+    while (min(Re(eigen(positive_def)$values)) < 0) {
+      positive_def = positive_def + diag(nroi)
+    }
+    
+    true_signal <- mvrnorm(n=nt, mu=c(array(0, nroi)), Sigma=positive_def)
+    for (j in 1:nscans) {
+      # Note that our latent signals have the same covariance they are derived from
+      latent_signal[,,(i-1)*nscans + j%%nscans + 1] <- true_signal
+      trials <- c(trials, i)
+    }
+  }
+  
+  obs_signal <- array(0, dim=c(nt, nroi, nsubs*nscans))
+  # test how adding zero mean noise with increasing covariance impacts our discriminability
+  sigar <- seq(0, 2, .1)
+  sigar <- c(0)
+  discr <- array(0, dim=c(length(sigar)))
+  for (sigid in 1:length(sigar)) {
+    sigma = sigar[sigid]
+    graphs <- array(0, dim=c(nroi, nroi, nscans*nsubs))
+    for (scan in seq(1, nsubs*nscans, 1)) {
+      positive_def = rnorm(nroi, 0, sigma)
+      positive_def = positive_def %*% t(positive_def)
+      while (min(Re(eigen(positive_def)$values)) < 0) {
+        positive_def = positive_def + diag(nroi)
+      }
+      noise <- mvrnorm(n=nt, mu=c(array(0, nroi)), Sigma=positive_def)
+      obs_signal[,,scan] <- latent_signal[,,scan] + noise
+      graphs[,,scan] <- cor(obs_signal[,,scan])
+    }
+    discr[sigid] <- discriminability(rdf(distance(graphs), id = trials))
+  }
+  disc_frame <- melt(discr)
+  names(disc_frame) <- c('Sigma', 'Discriminability')
+  disc_frame$Sigma <- sigar
+  ggplot(disc_frame, aes(x=Sigma, y=Discriminability)) + 
+    geom_line(size=1.5, color='blue') +
+    ggtitle('Discriminability as a function of Sigma of Noise added') +
+    theme(legend.position='none')
+```
