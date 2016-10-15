@@ -136,7 +136,7 @@ Let's simulate a very simplified fMRI study to take a look at how the discrimina
 
 Here, we have 4 sets of 4 step timeseries, each with 2 ROIs, where particular observations are either 1 or 0 for a particular ROI. The first and third have the timeseries for each ROI shifting in phase; that is, when one ROI is 1, the other is 1, and vice versa for 0s; the second and fourth have the timeseries for each ROI out of phase; that is, when one ROI has value 1, the other is 0, and vice versa. For these experiments, we will consider the correlation between ROIs as our metric of interest. Let's compute the correlation for each set of observations and plot:
 
-```{r message=FALSE}
+```{r message=FALSE, fig.width=12, fig.height=2.5}
   require('ggplot2')
   require('reshape2')
   require('Rmisc')
