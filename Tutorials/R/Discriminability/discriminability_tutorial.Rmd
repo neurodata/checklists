@@ -197,14 +197,13 @@ We get a mnr score of .25; that is, the corresponding within-subject graph is th
     for (j in 1:nscans) {
       # Note that our latent signals have the same covariance they are derived from
       latent_signal[,,(i-1)*nscans + j%%nscans + 1] <- true_signal
-      trials <- c(trials, i)
+      trials <- c(trials, toString(i))
     }
   }
   
   obs_signal <- array(0, dim=c(nt, nroi, nsubs*nscans))
   # test how adding zero mean noise with increasing covariance impacts our discriminability
   sigar <- seq(0, 2, .1)
-  sigar <- c(0)
   discr <- array(0, dim=c(length(sigar)))
   for (sigid in 1:length(sigar)) {
     sigma = sigar[sigid]
