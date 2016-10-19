@@ -1,25 +1,6 @@
 ## Given a new set of n samples of vectors in R^d
 
 
-1. What fraction of features of each kind (binary, integer, non-negative, character, string etc.)
-2. What is the distribution of NaNs per row? Per column? Infs per row? Per column?
-3. heat map of raw data
-``` 
-if n<1000, d<100       
-    then Heat map of raw data
- if n>>1000, d<100   
-    then .....
- ```
-4. "Violin" plot
-```
-Jittered scatter plot with opacity overlaid on Violin plots of each dimension
-```
-5. Outlier plot
-6. Correlation matrix of features
-7. Cumulative variance (with elbows)
-8. Pairs plots for top ~8 dimensions
-9. mclust++ for k=1,...10 for all 10 models, plot BIC curves
-10. color points in pairs plot by best cluster estimates
 
 
 
