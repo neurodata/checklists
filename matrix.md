@@ -10,8 +10,10 @@ if n<1000, d<100
  if n>>1000, d<100   
     then .....
  ```
- 
-4. Jittered scatter plot with opacity overlaid on Violin plots of each dimension
+4. "Violin" plot
+```
+Jittered scatter plot with opacity overlaid on Violin plots of each dimension
+```
 5. Outlier plot
 6. Correlation matrix of features
 7. Cumulative variance (with elbows)
