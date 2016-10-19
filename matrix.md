@@ -3,10 +3,11 @@
 
 1. What fraction of features of each kind (binary, integer, non-negative, character, string etc.)
 2. What is the distribution of NaNs per row? Per column? Infs per row? Per column?
-3. if n<1000, d<100       
+3. ``` if n<1000, d<100       
     then Heat map of raw data
  if n>>1000, d<100   
     then .....
+ ```
  
 4. Jittered scatter plot with opacity overlaid on Violin plots of each dimension
 5. Outlier plot
