@@ -8,8 +8,8 @@
 5. Spectrogram for each dimension (if d>10, compress d)
 6. Correlation matrix of features (if d>100, compress d)
 7. Cumulative variance (with elbows)
-7. Anomaly detection plot
-9. Change-point detection plot
+7. Anomaly detection plot (maybe using outlier detection meda?)
+9. Change-point detection plot (maybe using mclust++?)
 
 - to compress n, 
     1. subsample contiguous block, 
