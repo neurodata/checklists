@@ -1,7 +1,15 @@
 ## Given a new set of n samples of vectors in R^d
 
-
-
+1. What fraction of features of each kind (binary, integer, non-negative, character, string etc.)
+2. What is the distribution of NaNs per row? Per column? Infs per row? Per column?
+3. Heat map of raw data that fits on screen (subsample n & d if necessary)
+4. Violin plot of each dimension (subsample d if necessary, overlay jittered scatter if n < 1000)
+5. Outlier plot
+6. Correlation matrix of features (sub sample features if necessary)
+7. Cumulative variance (with elbows)
+8. Pairs plots for top ~8 dimensions (use data embedded into PCA space if d>8)
+9. mclust++ for k=1,...10 for all 10 models, plot BIC curves
+10. draw voronoi diagram (induced by mclust++) overlaid on "pairs plots", and color code points
 
 
 ###  if n<1000, d<100:
@@ -59,4 +67,3 @@
 8. Pairs plots of data after embedded into the top ~8 dimensions
 9. mclust++ for k=1,...10 for all 10 models, plot BIC curves, using the dimension chosen by ZG(2)
 10. draw voronoi diagram overlaid on "pairs plots"
-11. random projections
