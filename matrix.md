@@ -2,19 +2,18 @@
 
 1. What fraction of features of each kind (binary, integer, non-negative, character, string etc.)
 2. What is the distribution of NaNs per row? Per column? Infs per row? Per column?
-3. Heat map of raw data that fits on screen (subsample n & d if necessary)
-4. Violin plot of each dimension (subsample d if necessary, overlay jittered scatter if n < 1000)
+3. Heat map of raw data that fits on screen (compress n & d if necessary)
+4. Violin plot of each dimension (compress d if necessary, overlay jittered scatter if n < 1000)
 5. Outlier plot
-6. Correlation matrix of features (subsample d if necessary)
+6. Correlation matrix of features (compress d if necessary)
 7. Cumulative variance (with elbows)
-8. Pairs plots for top ~8 dimensions (use data embedded into dimension reduced space if d>8)
+8. Pairs plots for top ~8 dimensions (select/learn informative dimensions when d>8)
 9. mclust++ for k=1,...10 for all 10 models, plot BIC curves
 10. draw voronoi diagram (induced by mclust++) overlaid on "pairs plots", and color code points
 
-NB: subsample strategy could be random, or
-- for subsampling dimensions, could use "[column based matrix approximation](http://epubs.siam.org/doi/abs/10.1137/12086755X)" 
-- for subsampling samples, could use "k-mediods"
-- for dimension reduced space, use PCA when possible, randomized PCA if data too big
+NB
+- to compress n, (i) subsample, or (ii) "k-mediods"
+- to compress d, (i) PCA, or (ii)  "[column based matrix approximation](http://epubs.siam.org/doi/abs/10.1137/12086755X)" 
 
 
 ###  if n<1000, d<100:
