@@ -11,7 +11,7 @@ the structure is always the same:
   3. function name
   4. step-by-step instructions, comments where appropriate
   
-3. describe two different simulations settings and their parameters (not two different ways of running the algorithm) (possibly in pseudocode if necessary) that you will write to test the code
+3. describe two different simulations settings by writing the sampling/generative distributions that you will write to test the code
   1. one example for which you believe the algorithm will do well
   2. one example for which you believe the algorithm will not do well but it is possible for a different algorithm to do well
 5. choose visualizations for qualitatively evaluating performance
