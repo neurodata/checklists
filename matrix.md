@@ -12,8 +12,8 @@
 10. draw voronoi diagram (induced by mclust++) overlaid on "pairs plots", and color code points
 
 NB
-- to compress n, (i) subsample, or (ii) "k-mediods"
-- to compress d, (i) PCA, or (ii)  "[column based matrix approximation](http://epubs.siam.org/doi/abs/10.1137/12086755X)" 
+- to compress n, (i) subsample uniformly at random, (ii) k-means for large k (show means), or  (iii) "k-mediods" for large k (show medians)
+- to compress d, (i) subsample uniformly at random, (ii) PCA, or (iii)  "[column based matrix approximation](http://epubs.siam.org/doi/abs/10.1137/12086755X)" 
 
 
 ###  if n<1000, d<100:
