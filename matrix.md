@@ -15,7 +15,8 @@
     1. subsample uniformly at random, 
     2. k-means for large k (show means), or  
     3. "k-mediods" for large k (show mediods)
+    4. or CUR?
 - to compress d, 
     1. subsample uniformly at random, 
     2. PCA, or 
-    3. "[column based matrix approximation](http://epubs.siam.org/doi/abs/10.1137/12086755X)" 
+    3. CUR decomposition
