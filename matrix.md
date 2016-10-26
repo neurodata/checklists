@@ -13,9 +13,7 @@
 
 - to compress n, 
     1. subsample uniformly at random, 
-    2. k-means for large k (show means), or  
-    3. "k-mediods" for large k (show mediods)
-    4. or CUR?
+    2. use 1 iteration of k-means++ 
 - to compress d, 
     1. subsample uniformly at random, 
     2. PCA, or 
