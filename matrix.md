@@ -2,7 +2,7 @@
 
 1. What fraction of features of each kind (binary, integer, non-negative, character, string etc.)
 2. What is the distribution of NaNs per row? Per column? Infs per row? Per column? "Zero" variance rows? columns?
-3. Heat map of raw data that fits on screen (if n>1000, compress n, if d>100, compress d)
+3. Heat map of scaled data that fits on screen (if n>1000, compress n, if d>100, compress d)
 4. Violin plot of each dimension (if d>100, compress d, if n < 1000, overlay jittered scatterplot)
 5. Outlier plot (if n>1000, show violin plot with outliers plotted as jittered scatterplot) 
 6. Correlation matrix of features (if d>100, compress d)
