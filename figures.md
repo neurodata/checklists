@@ -51,6 +51,7 @@ we'll make clarify these issues in a future edit.
 1. Does the caption begin with a sentence (fragment) stating what the figure is demonstrating (i.e., why it is there)?  
 2. Does the caption define all acronyms used in the figure (especially if they are not used anywhere else)?
 3. Does the caption end by pointing out particularly interesting aspects of the figure that one should note?
+4. Is each panel explicitly mentioned/explained?
 
 ### basics:
 
@@ -65,5 +66,6 @@ we'll make clarify these issues in a future edit.
 15. Is the aspect ratio correct? (Hint: if you rescaled both the width and height separately, it is probably not.)
 16. If the data are 2D, are you displaying it in 2D? (If not, remove that additional 3rd dimension, it is just confusing and obfuscatory.)
 17. is anything not aligned that could be aligned?
-18. if its a bar chart, does the y-axis start at zero?  
+14. Are the number of significant figures reasonable (eg, usually 2 is reasonably, 3 is not, in biology)?
+18. if its a bar chart, does the y-axis start at zero (if it is a log axis, the answer is no)?  
 19. if its a pie chart, can you replace it with a stacked barchart (or something else)?
