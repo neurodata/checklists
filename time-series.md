@@ -10,6 +10,8 @@
 7. Cumulative variance (with elbows)
 7. Anomaly detection plot (maybe using outlier detection meda?)
 9. Change-point detection plot (maybe using mclust++?)
+10. dF/<F>
+
 
 - to compress n, 
     1. subsample contiguous block, 
