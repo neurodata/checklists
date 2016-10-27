@@ -8,8 +8,9 @@
 6. Correlation matrix of features (if d>100, compress d)
 7. Cumulative variance (with elbows)
 8. Pairs plots for top ~8 dimensions (if d>8, compress d, if n>1000, use heatmap rather than scatterplot)
-9. mclust++ for k=1,...10 for all 10 models, plot BIC curves (if d>n, compress d)
+9. hierarchical mclust++ for k=1,2 for all 10 models, plot BIC curves (if d>n, compress d)
 10. draw voronoi diagram (induced by mclust++) overlaid on "pairs plots", and color code points
+11. means & variances for each level of mclust++
 
 - to compress n, 
     1. subsample uniformly at random, 
