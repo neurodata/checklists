@@ -2,7 +2,8 @@ Follow the following steps to write any new code:
 
 **[Python Notebook Example](./Tutorials/Python/code_example.ipynb)**
 
-1. write pseudocode as carefully as you can, typically using latex "algorithm" package. there are several examples here: 
+### Describe stuff
+1. **Algorithm** write pseudocode as carefully as you can, typically using latex "algorithm" package. there are several examples here: 
 http://arxiv.org/abs/1609.05148.
 the structure is always the same:
 
@@ -11,16 +12,22 @@ the structure is always the same:
   3. function name
   4. step-by-step instructions, comments where appropriate
   
-3. describe two different simulations settings by writing the sampling/generative distributions that you will write to test the code
-  1. one example for which you believe the algorithm will do well
-  2. one example for which you believe the algorithm will not do well but it is possible for a different algorithm to do well
-5. choose visualizations for qualitatively evaluating performance
-6. specify metrics for quantitatively evaluating performance
-8. write code generating simulated data
+3. **Simulation** write the sampling/generative distributions that you will write to test the code (it must have the property that you know exactly what the answer should be)
+5. **Qualatative Analysis** describe visualizations for qualitatively evaluating performance
+6. **Quantitative Analysis** determine metrics for quantitatively evaluating performance
+
+### Write Code
+8. generate simulated data
+10. algorithm code
+11. qualitative evaluation code
+12. quantitative evaluation code
+
+### Evaluate Stuff
+8. describe in words what you think the simulations will look like
 9. plot simulated data
-10. write algorithm code
-11. write qualitative evaluation code
-12. write quantitative evaluation code
+10. report whether it looks "right"
+
+
 13. run quantitatively evaluate simulations (use >= 10 repititions randomizing simulation parameters, plots *all* results)
 14. quantitatively evaluate via a plot of quantitative evaluation for each repitition in both cases
 15. Report p-value using meaningful test statistic to determine whether the alg worked better than chance in the 2 cases. 
