@@ -13,7 +13,7 @@
 11. means & variances for each level of mclust++
 
 
-### Compression
+### Compression Options
 
 - to compress n, 
     1. subsample uniformly at random, 
@@ -22,3 +22,15 @@
     1. subsample uniformly at random, down to \hat{d} = 100 
     2. PCA for first 100 PCs, or 
     3. CUR decomposition
+
+### Scaling Options
+
+- raw
+- linear options
+    - linear squash between 0 & 1
+    - mean subtract and standard deviation divide
+    - median subtract and median absolute deviation divide
+    - make unit norm
+- nonlinear
+    - rank
+    - sigmoid squash
