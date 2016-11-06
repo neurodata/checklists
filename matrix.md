@@ -12,6 +12,9 @@
 10. draw voronoi diagram (induced by mclust++) overlaid on "pairs plots", and color code points
 11. means & variances for each level of mclust++
 
+
+### Compression
+
 - to compress n, 
     1. subsample uniformly at random, 
     2. use k-means++ initialization to choose 1000 points. 
