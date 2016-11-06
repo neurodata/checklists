@@ -32,7 +32,7 @@ the structure is always the same:
 9. plot simulated data
 10. report whether it looks "right"
 
-### Algorithm
+#### Algorithm
 1. describe in words how you think the simulation will perform
 13. run alg on simulation 10 times  (randomizing simulation parameters)
 13. plots results for each iteration use qualitative stuff as described above
