@@ -13,12 +13,11 @@ the structure is always the same:
   4. step-by-step instructions, comments where appropriate
   
 3. **Simulation** write the sampling/generative distributions that you will write to test the code (it must have the property that you know exactly what the answer should be)
-5. Single trial analysis
-   5. **Qualitative Analysis** describe visualizations for qualitatively evaluating performance
-   6. **Quantitative Analysis** determine metrics for quantitatively evaluating performance
-6. Multi-trial analysis
-   5. **Qualitative Analysis** describe visualizations for qualitatively evaluating performance
-   6. **Quantitative Analysis** determine statistic for quantitatively evaluating performance
+5. **Analysis** descirbe the following
+   5. *Qualitative* visualizations per trial for qualitatively evaluating performance
+   6. *Quantitative*  metrics per trial for quantitatively evaluating performance
+   6. *Summary Plot*  visualization of summary statistic described above (often a histogram)
+   5. *P-value* test statistic and procedure for obtaining null distribution for above described metric.
 
 ### Write Code
 8. generate simulated data
