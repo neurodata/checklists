@@ -12,3 +12,5 @@ check for these words, and remove/replace as appropriate
 13. essential/necessary: is it though? says who? nobody could ever figure out a way around it? you probably mean useful.
 14. done --> completed.
 15. used --> utilized
+16. firstly --> first
+17. & --> and
