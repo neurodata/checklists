@@ -16,11 +16,11 @@
 ### Compression Options
 
 - to compress n, 
-    1. subsample uniformly at random, 
+    1. subsample uniformly at random, or
     2. use k-means++ initialization to choose 1000 points. 
 - to compress d, 
-    1. subsample uniformly at random, down to \hat{d} = 100 
-    2. PCA for first 100 PCs, or 
+    1. subsample uniformly at random
+    2. truncated PCA, or 
     3. CUR decomposition
 
 ### Scaling Options
