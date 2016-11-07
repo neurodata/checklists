@@ -23,3 +23,7 @@ when writing a grant, to any funding agency:
 - use [paperpile](https://paperpile.com/) for references (free version for 2 weeks)
 - use [auto-latex](https://chrome.google.com/webstore/detail/auto-latex-equations/iaainhiejkciadlhlodaajgbffkebdog?hl=en-US) for equations
 - keep figures at very end until last opportunity
+
+### if using latex
+
+- use a template from some recent jovo grant
