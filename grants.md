@@ -2,6 +2,7 @@ when writing a grant, to any funding agency:
 
 1. for each task, include a **bold** sentence precisely and concisely stating its objective
 2. make sure to distinguish your own work from others explicitly every time your work is cited
+3. check that formatting is consistent across *all* documents (both within type, eg biosketches) and across.
 
 ### NSF specific
 
@@ -14,3 +15,10 @@ when writing a grant, to any funding agency:
 
 ### NIH specific
 
+
+### if using google docs
+
+- recall that must page numbers must be added somehow (e.g., by exporting as a word document)
+- use [paperpile](https://paperpile.com/) for references (free version for 2 weeks)
+- use [auto-latex](https://chrome.google.com/webstore/detail/auto-latex-equations/iaainhiejkciadlhlodaajgbffkebdog?hl=en-US) for equations
+- keep figures at very end until last opportunity
