@@ -15,3 +15,4 @@ check for these words, and remove/replace as appropriate
 16. firstly --> first
 17. & --> and
 18. when explicitly referring to a reference, use citet{Blah}
+19. arguably --> possibly, likely, perhaps
