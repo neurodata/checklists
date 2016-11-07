@@ -1,5 +1,7 @@
 when writing a grant, to any funding agency:
 
+1. follow [words](words.md)
+1. follow [paragraphs](paragraphs.md)
 1. each subtask should follow OCAR
 1. for each task, include a **bold** sentence precisely and concisely stating its objective (the *action* part)
 2. make sure to distinguish your own work from others explicitly every time your work is cited
