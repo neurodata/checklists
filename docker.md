@@ -1,6 +1,7 @@
 ## Principles to follow:
 
-1. base your image on an existing neurodata image, such as [`neurodata/ndio`](https://hub.docker.com/r/neurodata/ndio/)
+1. base your image on an existing neurodata image, if applicable, such as [`neurodata/ndio`](https://hub.docker.com/r/neurodata/ndio/)
+  - whenever possible, include versions
 2. define an entrypoint for your container
   - if it is a pipeline, have the entrypoint be launching the pipeline
   - if it is an environment, have the entrypoint be `/bin/bash`
