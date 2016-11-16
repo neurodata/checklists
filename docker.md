@@ -22,3 +22,5 @@
   - just a terrible idea......
 9. ask questions if you don't know how to do things
   - we would always much rather answer questions than be frustrated that you broke something. If you don't know how to do something, ask a very specific question of your problem (and provide sufficient context if you want a speedy answer).
+10. do not touch anybody else's containers, or your access will be revoked.
+11. know that your system administrator reserves the right to remove all containers s/he deems to not be built in accordance to the above policies without notice.
