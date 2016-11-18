@@ -20,3 +20,4 @@ check for these words, and remove/replace as appropriate
 20. don't, can't, any other contraction --> do not, cannot, etc.
 21. as such --> ok sparsely, but often overused, check and revise sentences.
 22. numbers have space before unit, eg 1GB --> 1 GB.
+23. first --> somebody reading this will think they did it first, and they are at least partially correct. firstness should be implied by context.

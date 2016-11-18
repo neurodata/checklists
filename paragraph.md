@@ -1,6 +1,6 @@
 things to check for each paragraph
 
-10. first: somebody reading this will think they did it first, and they are at least partially correct. firstness should be implied by context.
+
 1. sequence old to new: start with previously introduced concepts before exposing readers to new concepts
 2. sequence light to heavy: sequence sentences with sentences that start light/succint, follow-up with "heavy" details
 3. use transitional words to establish logical relationship between sentences
