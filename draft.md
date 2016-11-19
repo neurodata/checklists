@@ -1,10 +1,12 @@
 upon believing that you have completed work sufficient to write a peer reviewed manuscript, follow the following steps, basically in order):
 
 1. 1 sentence summary (will become your title;  ~5 min)
-2. 4 sentence summary (will become your abstract;  ~30 min)
-  1. opportunity sentence: what is the grandest opportunity that this work is addressing?
+2. 1 paragraph summary (will become your abstract;  ~30 min)
+  1. big opportunity sentence: what is the grandest opportunity that this work is addressing?
+  1. specific opportunity: what opportuntity specifically will this manuscript address?
   2. challenge sentence: what is hard about addressing this opportunity?
-  3. action sentence: what did you do to address the challenge and therefore meet the opportunity?
+  3. gap sentence: what is currently missing?
+  3. action sentence: what did you do to address the gap, overcome the challenge, and therefore meet the opportunity?
   4. resolution sentence: what changes for the reader now that you have met this
 challenge? 
 
@@ -21,3 +23,9 @@ challenge?
 5. outline of discussion, to include
   1. bulleted list of previous related work (~20 min)
   2. bulleted list of potential extensions (~20 min)
+6. outline of methods, to include:
+  1. plain text description of algorithm
+  1. pseudocode
+  1. simulation settings
+  1. real data settings
+  1. evaluation dimensions (see [algorithms.md](algorithms.md))
