@@ -1,6 +1,9 @@
 check for these words, and remove/replace as appropriate
 
 1. check for any misspelled words using spellcheck
+2. replace contractions with complete words (eg, don't --> do not)
+3. replace abbreviations with complete words (eg, Fig. --> Figure) 
+3. replace colloquialisms with more formal words (eg, nowadays --> recently)
 2. i, we, our, us, you, your --> rewrite sentence
 3. in order to/for --> to/for
 4. clearly, obviously --> remove, might not be so clear/obvious to everyone
@@ -19,7 +22,6 @@ check for these words, and remove/replace as appropriate
 18. when explicitly referring to a reference, use citet{Blah}
 19. arguably --> possibly, likely, perhaps
 11. usually --> same deal, either provide a citation/evidence, or don't say it
-20. don't, can't, any other contraction --> do not, cannot, etc.
 21. as such --> ok sparsely, but often overused, check and revise sentences.
 22. numbers have space before unit, eg 1GB --> 1 GB.
 23. first --> somebody reading this will think they did it first, and they are at least partially correct. firstness should be implied by context.
