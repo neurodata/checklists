@@ -25,6 +25,7 @@ the structure is always the same:
 
 
 ## Write Code
+
 8. generate simulated data for both settings
 10. algorithm code
 11. qualitative evaluation code per trial
@@ -37,12 +38,15 @@ the structure is always the same:
 #### Simulation
 
 for each simulation: 
+
 8. describe in words what you think the simulations will look like
 9. plot simulated data
 10. report whether it looks "right"
 
 #### Simulated Analysis
+
 for each simulation: 
+
 1. describe in words how you think the algorithm will perform in this simulation
 13. run alg on simulation 10 times  (randomizing simulation parameters)
 13. plots results for each iteration use qualitative evaluation as described above
