@@ -28,9 +28,9 @@ the structure is always the same:
 
 8. generate simulated data for both settings
 10. algorithm code
-11. qualitative evaluation code per trial
+11. qualitative evaluation (eg, figures) code per trial
 12. quantitative evaluation code per trial
-13. qualitative evaluation over all experiments
+13. qualitative evaluation (eg, figures) over all experiments
 14. quantitative evaluation over all experiments
 
 ## Experiments
@@ -40,7 +40,7 @@ the structure is always the same:
 for each simulation: 
 
 8. describe in words what you think the simulations will look like
-9. plot simulated data
+9. plot simulated data, as raw as possible (ie, all observed variables, latent variables, and parameters)
 10. report whether it looks "right"
 
 #### Simulated Analysis
