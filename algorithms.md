@@ -26,6 +26,8 @@ the structure is always the same:
 
 ## Write Code
 
+For each of these, provide a link from the appropriate github repo:
+
 8. generate simulated data for both settings
 10. algorithm code
 11. qualitative evaluation (eg, figures) code per trial
