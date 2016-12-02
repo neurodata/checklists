@@ -27,3 +27,5 @@ check for these words, and remove/replace as appropriate
 23. first --> somebody reading this will think they did it first, and they are at least partially correct. firstness should be implied by context.
 24. in this manuscript --> nothing, it is implied.
 25. a priori --> should be italics
+1. we want to --> we (though should be reworded to avoid "we" entirely)
+1. Fig, Fig., fig --> Figure
