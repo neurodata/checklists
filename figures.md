@@ -1,13 +1,11 @@
-the following checklist is for *explanatory figures*, which is a special class of figures.
-other kinds of figures include "exploratory" and "schematic", which have somewhat different guidelines.
-we'll make clarify these issues in a future edit.
+the following checklist is for *explanatory figures* (including tables), which is a special class of figures. other kinds of figures include "exploratory" and "schematic", which have somewhat different guidelines, and will be discussed elsewhere.
 
 
 
 ### crucial
 
-1. does the main point of the figure "pop-out" to your audience (note: answering this question successfully requires knowing precisely what the main point is, and who your audience is.)?
-2. is there any way to reduce cognitive load for the audience, and still make the same point?
+1. Does the main point of the figure "pop-out" to your audience (note: answering this question successfully requires knowing precisely what the main point is, and who your audience is.)?
+2. Is there any way to reduce cognitive load for the audience, and still make the same point?
 
 ### clutter:
 
@@ -42,15 +40,18 @@ we'll make clarify these issues in a future edit.
 4. Are all lines labeled? If so, can they be labeled directly, rather than in a legend?
 5. Is your method named something other than ‘proposed method’ or 'our method’? If not, name it and use it throughout.
 6. Are all the letters/numbers fully visible (i.e., not obscured by part of the figure)?
-7. can the language be simplified?
-8. is there a title? does it provide context (rather than naming the axes again, eg, the name of the dataset or simulation)?
-9. Is everything that is "latexable" (like greek letters, subscripts, etc.) "latexed" (in other words, don't ever write "alpha" or "_")?
+7. Can the language be simplified?
+8. Is there a title? does it provide context (rather than naming the axes again, eg, the name of the dataset or simulation)?
+9. Is everything that is "latexable" (like greek letters, subscripts, etc.) "latexed" (in other words, did you remove things like "alpha" or "_")?
 
 ### caption:
 
 1. Does the caption begin with a sentence (fragment) stating what the figure is demonstrating (i.e., why it is there)?  
 2. Does the caption define all acronyms used in the figure (especially if they are not used anywhere else)?
 3. Does the caption end by pointing out particularly interesting aspects of the figure that one should note?
+4. Is each panel explicitly mentioned/explained?
+5. Is the caption below the figure (or above the table)?
+6. If its a log scale, axis label say so?
 
 ### basics:
 
@@ -64,6 +65,31 @@ we'll make clarify these issues in a future edit.
 13. Are all graphics that can be vector graphics actually vector graphics? 
 15. Is the aspect ratio correct? (Hint: if you rescaled both the width and height separately, it is probably not.)
 16. If the data are 2D, are you displaying it in 2D? (If not, remove that additional 3rd dimension, it is just confusing and obfuscatory.)
-17. is anything not aligned that could be aligned?
-18. if its a bar chart, does the y-axis start at zero?  
-19. if its a pie chart, can you replace it with a stacked barchart (or something else)?
+17. Is anything not aligned that could be aligned?
+14. Are the number of significant digits reasonable (eg, usually 2 is reasonable, 3 is not, in biology)?
+18. If its a bar chart, does the y-axis start at zero (if it is a log axis, the answer is no)?  
+19. If its a pie chart, can you replace it with a stacked barchart (or something else)?
+20.  If you are comparing multiple approaches across multiple settings, are you grouping by the key comparison (eg, usually group by setting to make comparisons easier)?
+
+
+### Multipanel figures
+
+20. Can certain axes/labels be removed because they are redundant?
+21. Does the caption specifically mention each?
+22. Are the captions for each collected together in the overall figure caption?
+
+### Table
+
+23. Can it be converted to a figure? If so, do it (put table in appendix if you are scared of losing the information)!
+24. Are the rows sorted in a reasonable fashion (ie, according to the most important column)?
+14. Are the number of significant digits reasonable (eg, usually 2 is reasonable, 3 is not, in biology)?
+
+
+
+### Issues to make:
+
+- good/bad example for:
+	- line plot
+	- 2D scatter plot
+	- "distributions" plot
+	- heatmap

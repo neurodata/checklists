@@ -1,62 +1,36 @@
 ## Given a new set of n samples of vectors in R^d
 
-
-
-
-
-###  if n<1000, d<100:
-
 1. What fraction of features of each kind (binary, integer, non-negative, character, string etc.)
-2. What is the distribution of NaNs per row? Per column? Infs per row? Per column?
-3. Heat map of raw data
-4. Jittered scatter plot with opacity overlaid on Violin plots of each dimension
-5. Outlier plot
-6. Correlation matrix of features
+2. What is the distribution of NaNs per row? Per column? Infs per row? Per column? "Zero" variance rows? columns?
+3. Heat map of raw data that fits on screen (if n>1000, compress n, if d>100, compress d)
+4. Violin plot of each dimension (if d>100, compress d, if n < 1000, overlay jittered scatterplot)
+5. Outlier plot (if n>1000, show violin plot with outliers plotted as jittered scatterplot) 
+6. Correlation matrix of features (if d>100, compress d)
 7. Cumulative variance (with elbows)
-8. Pairs plots for top ~8 dimensions
-9. mclust++ for k=1,...10 for all 10 models, plot BIC curves
-10. color points in pairs plot by best cluster estimates
+8. Pairs plots for top ~8 dimensions (if d>8, compress d, if n>1000, use heatmap rather than scatterplot)
+9. hierarchical mclust++ for k=1,2 for all 10 models, plot BIC curves (if d>n, compress d)
+10. draw voronoi diagram (induced by mclust++) overlaid on "pairs plots", and color code points
+11. means & variances for each level of mclust++
 
 
+### Compression Options
 
-### if n>>1000, d<100:
+- to compress n, 
+    1. subsample uniformly at random, or
+    2. use k-means++ initialization to choose 1000 points. 
+- to compress d, 
+    1. subsample uniformly at random
+    2. truncated PCA, or 
+    3. CUR decomposition
 
-1. What fraction of features of each kind (binary, integer, non-negative, character, string etc.)
-2. What is the distribution of NaNs per row? Per column? Infs per row? Per column?
-3. Heat map of randomly selected 1,000 samples of raw data
-4. Violin plots of each dimension
-5. Outlier plot
-6. Correlation matrix of features
-7. Cumulative variance (with elbows)
-8. "Pairs plots" of 2D kernel density estimates for top ~8 dimensions
-9. mclust++ for k=1,...10 for all 10 models, plot BIC curves
-10. draw voronoi diagram overlaid on "pairs plots"
+### Scaling Options
 
-
-### if n<1000, d>>100:
-
-1. What fraction of features of each kind (binary, integer, non-negative, character, string etc.)
-2. What is the distribution of NaNs per row? Per column? Infs per row? Per column?
-3. Heat map of randomly selected 1,000 dimensions of raw data
-4. Violin plots of randomly selected ~100 dimension
-5. Outlier plot
-6. Cumulative variance (with elbows)
-7. Top ~10 eigenvectors
-8. Pairs plots of data after embedded into the top ~8 dimensions
-9. mclust++ for k=1,...10 for all 10 models, plot BIC curves, using the dimension chosen by ZG(2)
-10. draw voronoi diagram overlaid on "pairs plots"
-
-
-### if n>>1000, d>>100:
-
-1. What fraction of features of each kind (binary, integer, non-negative, character, string etc.)
-2. What is the distribution of NaNs per row? Per column? Infs per row? Per column?
-3. Heat map of randomly selected 1,000 dimensions of ~1000 random samples of data
-4. Violin plots of randomly selected ~100 dimensions
-5. Outlier plot
-6. Cumulative variance (with elbows)
-7. Top ~10 eigenvectors
-8. Pairs plots of data after embedded into the top ~8 dimensions
-9. mclust++ for k=1,...10 for all 10 models, plot BIC curves, using the dimension chosen by ZG(2)
-10. draw voronoi diagram overlaid on "pairs plots"
-11. random projections
+- raw
+- linear options
+    - linear squash between 0 & 1
+    - mean subtract and standard deviation divide
+    - median subtract and median absolute deviation divide
+    - make unit norm
+- nonlinear
+    - rank
+    - sigmoid squash
