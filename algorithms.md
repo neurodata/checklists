@@ -1,6 +1,6 @@
 
 
-To determine whether you can successfully run an algorithm, follow these steps (*[possibly outdated python notebook example](./Tutorials/Python/code_example.ipynb)*):
+To determine whether you can successfully run an algorithm, follow these steps (*[python notebook example](./Tutorials/Python/code_example.ipynb)*):
 
 ## Describe Approach
 1. **Algorithm** write pseudocode as carefully as you can, typically using latex "algorithm" package. there are several examples here: 
