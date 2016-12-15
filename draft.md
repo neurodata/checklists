@@ -6,7 +6,7 @@ upon believing that you have completed work sufficient to write a peer reviewed 
   1. specific opportunity: what opportuntity specifically will this manuscript address?
   2. challenge sentence: what is hard about addressing this opportunity?
   3. gap sentence: what is currently missing?
-  3. action sentence: what did you do to address the gap, overcome the challenge, and therefore meet the opportunity?
+  3. action sentence: what did you do to address the gap, overcome the challenge, and therefore meet the opportunity? it should provide the *key* intuition/insight, the magic that makes this work, where others failed.
   4. resolution sentence: what changes for the reader now that you have met this
 challenge? 
 
