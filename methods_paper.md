@@ -16,3 +16,6 @@ ideally, this is stated using statistical decision theoretical language.
 1. simulated benchmark: compare performance of new method with existing tools on simulated data, for which we know what we expect the answer to be.  ideally, the set of simulations overlaps with what previous people did, so we have fair comparisons.
 1. real data example: demonstration that the performance is not merely theoretical in nature, rather, it also improves performance on real data (relative to previously existing tools).
 1. synthetic data analysis: generate data as close to real data as possible, and run same analysis, to assess the degree of credance we lend to the results on the real data.
+
+
+for a good example, see my [signal subgraph paper](http://ieeexplore.ieee.org/document/6341752/)
