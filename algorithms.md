@@ -1,11 +1,12 @@
 
-### (*[python notebook example](./Tutorials/Python/code_example.ipynb)*):
 
 The goal of the below protocol is to:
 
 1. determine whether you understand the basic principles of a given algorithm
 2. can run it successfully
 3. can evaluate its performance meaningfully
+
+### (*[python notebook example](./Tutorials/Python/code_example.ipynb)*)
 
 
 ## Simulation Data
