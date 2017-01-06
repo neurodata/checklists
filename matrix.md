@@ -26,7 +26,7 @@
 1. label pairs plots by estimated cluster and overlay voronoi diagrams (induced by mclust++)
 
 
-### Iterate for each level
+### Iterate on results of mclust++ for each level, up to level 5 or so
 
 1. heatmap, sorted by child node
 2. violion plot, separated by child node
