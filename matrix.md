@@ -2,15 +2,41 @@
 
 1. What fraction of features of each kind (binary, integer, non-negative, character, string etc.)
 2. What is the distribution of NaNs per row? Per column? Infs per row? Per column? "Zero" variance rows? columns?
-3. Heat map of raw data that fits on screen (if n>1000, compress n, if d>100, compress d)
-4. Violin plot of each dimension (if d>100, compress d, if n < 1000, overlay jittered scatterplot)
-5. Outlier plot (if n>1000, show violin plot with outliers plotted as jittered scatterplot) 
-6. Correlation matrix of features (if d>100, compress d)
+
+
+
+3. Heat map of raw data that fits on screen 
+    1. if n>1000, compress n, 
+    1. if d>100, compress d
+4. Violin plot of each dimension 
+    1. if d>100, compress d, 
+    1. if n < 1000, overlay jittered scatterplot
+5. Outlier plot 
+    1. if n>1000, show violin plot with outliers plotted as jittered scatterplot 
+6. Correlation matrix of features
+    1. if d>100, compress d
 7. Cumulative variance (with elbows)
-8. Pairs plots for top ~8 dimensions (if d>8, compress d, if n>1000, use heatmap rather than scatterplot)
-9. hierarchical mclust++ for k=1,2 for all 10 models, plot BIC curves (if d>n, compress d)
-10. draw voronoi diagram (induced by mclust++) overlaid on "pairs plots", and color code points
-11. means & variances for each level of mclust++
+8. Pairs plots for top ~8 dimensions 
+    1. if d>8, compress d, 
+    1. if n>1000, use heatmap rather than scatterplot
+1. plot cumulative variance
+1. pairs plot of features embedded
+1. do hierarchical mclust++, plot BIC curves  (if d>n, compress d)
+1. label pairs plots by estimated cluster and overlay voronoi diagrams (induced by mclust++)
+
+
+1. for each level,
+    1. heatmap, sorted by child node
+    2. violion plot, separated by child node
+    1. outlier plot for each child node
+    1. mean for each child node, and difference between children
+    1. correlation matrix for each child node, and difference between children
+    1. cumulative variance for each child node
+    1. pairs plots for each child node
+    1. compute eigendecomposiiton of covariance matrix
+    1. scatter plot of embedded features
+
+
 
 
 ### Compression Options
@@ -20,7 +46,7 @@
     2. use k-means++ initialization to choose 1000 points. 
 - to compress d, 
     1. subsample uniformly at random
-    2. truncated PCA, or 
+    2. truncated PCA, using ZG{1,2,3} to select d, default to ZG-2 
     3. CUR decomposition
 
 ### Scaling Options
