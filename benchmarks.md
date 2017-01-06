@@ -47,7 +47,7 @@
 ### Describe Stuff
 
 1. Describe simulated settings---via formal generative process---for three
-differ:ent "suites":
+different "suites":
     3. Simulated benchmark suite, including
         1. at least one toy setting for which you suspect alg A will perform very well
     	2. at least one toy setting for which you suspect alg A will perform poorly, but alg A' will perform well (for some A')
