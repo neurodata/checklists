@@ -4,6 +4,7 @@
 2. What is the distribution of NaNs per row? Per column? Infs per row? Per column? "Zero" variance rows? columns?
 
 
+### For level 0
 
 3. Heat map of raw data that fits on screen 
     1. if n>1000, compress n, 
@@ -25,16 +26,17 @@
 1. label pairs plots by estimated cluster and overlay voronoi diagrams (induced by mclust++)
 
 
-1. for each level,
-    1. heatmap, sorted by child node
-    2. violion plot, separated by child node
-    1. outlier plot for each child node
-    1. mean for each child node, and difference between children
-    1. correlation matrix for each child node, and difference between children
-    1. cumulative variance for each child node
-    1. pairs plots for each child node
-    1. compute eigendecomposiiton of covariance matrix
-    1. scatter plot of embedded features
+### Iterate for each level
+
+1. heatmap, sorted by child node
+2. violion plot, separated by child node
+1. outlier plot for each child node
+1. mean for each child node, and difference between children
+1. correlation matrix for each child node, and difference between children
+1. cumulative variance for each child node
+1. pairs plots for each child node
+1. compute eigendecomposiiton of covariance matrix
+1. scatter plot of embedded features
 
 
 
@@ -60,3 +62,7 @@
 - nonlinear
     - rank
     - sigmoid squash
+    
+### robust options
+
+- use [Geometric median and robust estimation in Banach spaces](http://projecteuclid.org/euclid.bj/1438777595) to obtain robust estimates of location and scale
