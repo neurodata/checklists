@@ -69,3 +69,12 @@
 ### robust options
 
 - use [Geometric median and robust estimation in Banach spaces](http://projecteuclid.org/euclid.bj/1438777595) to obtain robust estimates of location and scale
+
+### if features have categories
+
+1. sort by category
+2. color code labels by category
+
+### if points have categories
+
+1. label points in scatter plots by symbol
