@@ -6,23 +6,40 @@
 
 ### For level 0
 
-3. Heat map of raw data that fits on screen 
+0. Heat map of raw data that fits on screen 
     1. if n>1000, compress n, 
     1. if d>100, compress d
-4. Violin plot of each dimension 
-    1. if d>100, compress d, 
-    1. if n < 1000, overlay jittered scatterplot
-5. Outlier plot 
-    1. if n>1000, show violin plot with outliers plotted as jittered scatterplot 
-6. (Robust) Correlation matrix of features
+1. location estimate: (robust) mean
     1. if d>100, compress d
-7. Cumulative variance (with elbows)
-8. Pairs plots for top ~8 dimensions 
-    1. if d>8, compress d, 
-    1. if n>1000, use heatmap rather than scatterplot
-1. plot (robust) cumulative variance
-1. pairs plot of features embedded
-1. do hierarchical mclust++, plot BIC curves  (if d>n, compress d)
+2. scale estimate: (robust) correlation matrix
+    1. if d>100, compress d
+3. density estimate
+    4. 1D marginals: Violin plot of each dimension 
+        1. if d>100, compress d, 
+        1. if n < 1000, overlay jittered scatterplot
+    8. 2D marginals: Pairs plots for top ~8 dimensions 
+        1. if d>8, compress d, 
+        1. if n>1000, use heatmap rather than scatterplot
+4. Outlier plot 
+    1. if n>1000, show violin plot with outliers plotted as jittered scatterplot 
+5. vector quantize
+    1. k-means++ initialization: heatmap of k points
+        1. if d>n, compress d
+    1. mclust++: BIC curves
+        1. if d>n, compress d
+6. feature quantize
+    1. (robust) cumulative variance (with elbows) of data matrix
+    1. (robust) cumulative variance (with elbows) of correlation matrix
+    1. pairs plot of embedded features
+
+
+
+----
+
+still working on the below
+
+given clustering:
+
 1. label pairs plots by estimated cluster and overlay voronoi diagrams (induced by mclust++)
 
 
