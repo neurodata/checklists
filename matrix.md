@@ -34,26 +34,18 @@
 
 
 
-----
-
-still working on the below
-
-given clustering:
-
-1. label pairs plots by estimated cluster and overlay voronoi diagrams (induced by mclust++)
-
-
 ### Iterate on results of mclust++ for each level, up to level 5 or so
 
 1. heatmap, sorted by child node
-2. violion plot, separated by child node
+1. location estimate per child + difference between children
+1. scale estimate per child + difference between children
+1. density estimate per child
+    2. 1D marginals: violion plot, separated by child node
+    1. 2D marginals: pairs plots, color coded by cluster, voronoi diagram overlaid
 1. outlier plot for each child node
-1. (robust) mean for each child node, and difference between children
-1. (robust) correlation matrix for each child node, and difference between children
-1. (robust) cumulative variance for each child node
-1. pairs plots for each child node
-1. compute eigendecomposiiton of covariance matrix
-1. scatter plot of embedded features
+1. vector quantize per child
+1. feature quantize per child
+
 
 
 
