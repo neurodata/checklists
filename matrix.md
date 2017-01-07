@@ -31,7 +31,7 @@
     1. (robust) cumulative variance (with elbows) of data matrix
     1. (robust) cumulative variance (with elbows) of correlation matrix
     1. pairs plot of embedded features
-
+    1. cluster features (mclust++), color pairs plot by cluster
 
 
 ### Iterate on results of mclust++ for each level, up to level 5 or so
