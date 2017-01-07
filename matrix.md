@@ -7,31 +7,25 @@
 ### For level 0
 
 0. Heat map of raw data that fits on screen 
-    1. if n>1000, compress n, 
-    1. if d>100, compress d
-1. location estimate: (robust) mean
-    1. if d>100, compress d
-2. scale estimate: (robust) correlation matrix
-    1. if d>100, compress d
+1. location estimate (line plots)
+    1. mean 
+    2. median 
+2. scale estimate (heatmaps)
+    1. correlation matrix 
+    1. robust correlation matrix
+    1. matrix of energy distances
 3. density estimate
-    4. 1D marginals: Violin plot of each dimension 
-        1. if d>100, compress d, 
-        1. if n < 1000, overlay jittered scatterplot
-    8. 2D marginals: Pairs plots for top ~8 dimensions 
-        1. if d>8, compress d, 
-        1. if n>1000, use heatmap rather than scatterplot
+    4. 1D marginals (Violin + jittered scatter plot of each dimension  in n < 1000, heatmap of density otherwise)
+    8. 2D marginals (Pairs plots for top ~8 dimensions if n<1000, 2D heatmaps otherwise)
 4. Outlier plot 
-    1. if n>1000, show violin plot with outliers plotted as jittered scatterplot 
 5. vector quantize
-    1. k-means++ initialization: heatmap of k points
-        1. if d>n, compress d
-    1. mclust++: BIC curves
-        1. if d>n, compress d
+    1. k-means++ initialization (heatmap of k points)
+    1. mclust++  (BIC curves)
 6. feature quantize
     1. (robust) cumulative variance (with elbows) of data matrix
     1. (robust) cumulative variance (with elbows) of correlation matrix
-    1. pairs plot of embedded features
-    1. cluster features (mclust++), color pairs plot by cluster
+    1. embedded features (pairs plot)
+    1. cluster features (mclust++: color pairs plot by cluster)
 
 
 ### Iterate on results of mclust++ for each level, up to level 5 or so
@@ -52,10 +46,10 @@
 
 ### Compression Options
 
-- to compress n, 
+- when n>1000, to compress n, 
     1. subsample uniformly at random, or
     2. use k-means++ initialization to choose 1000 points. 
-- to compress d, 
+- when d>100, to compress d, 
     1. subsample uniformly at random
     2. truncated PCA, using ZG{1,2,3} to select d, default to ZG-2 
     3. CUR decomposition
