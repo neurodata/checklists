@@ -13,7 +13,7 @@
 
 |   	    | low-d     | high-d    | 1-graph   | m-graphs | time-series |
 |---	    |---	      |---	      |---	      |---	    |---  |
-| par  	  | k-m  	    | k-m 	    | SBM  	    | semipar :question:  	| |
+| par  	  | k-m/hclust| k-m 	    | SBM  	    | semipar :question:  	| |
 | semi-par| gmm  	    | IDT :white_check_mark: 	    | DC-SCM    |  deltacon :question: 	| |
 | kernel  | SC  	    | SC  	    |:question: | :question:            | |
 | non-par | :question:| :question:| robust vertex clustering |   	    |  |
