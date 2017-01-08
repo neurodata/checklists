@@ -11,7 +11,7 @@
 
 ### clustering
 
-|   	    | low-d     | high-d    | 1-graph   | m-graphs |
+|   	    | low-d     | high-d    | 1-graph   | m-graphs | time-series
 |---	    |---	      |---	      |---	      |---	    | 
 | par  	  | k-m  	    | k-m 	    | SBM  	    | semipar :question:  	| 
 | semi-par| gmm  	    | IDT :white_check_mark: 	    | DC-SCM    |  deltacon :question: 	| 
@@ -23,7 +23,7 @@ SC: spectral clustering. k-m: k-means. IDT: iterative denoising tree
 
 ### classification
 
-|   	    | low-d     | high-d| 1-graph   | m-graphs |
+|   	    | low-d     | high-d| 1-graph   | m-graphs | time-series
 |---	    |---	      |---	  |---	      |---	    | 
 | par  	  | LDA  	    | LOL :white_check_mark:	| VN  	    | signal subgraph :question:  	| 
 | semi-par| QDA  	    | QOQ :white_check_mark:	| :question:    |   :question: 	    | 
@@ -33,10 +33,26 @@ SC: spectral clustering. k-m: k-means. IDT: iterative denoising tree
 
 ### regression
 
-|   	    | low-d           | high-d    | 1-graph   | m-graphs |
+|   	    | low-d           | high-d    | 1-graph   | m-graphs | time-series
 |---	    |---	            |---	      |---	      |---	    | 
 | par  	  | linear   	      | LOL :question: 	    | SBM  	    | semipar :question:  	| 
 | semi-par| polynomial  	  | QOQ :question: 	    | DC-SCM    |  deltacon :question: 	| 
 | kernel  | SVR  	          | :question:  	    |:question: | :question:            |
 | non-par | RerF :question: | RerF :question:| robust vertex clustering |   	    | 
 
+
+### action/control
+
+|     | metric |
+|---  |--- |
+| par | discriminability |
+non-par | MGC-discriminability :question: |
+
+### low dimensional embedding
+
+|   	    | low-d           | high-d          | 1-graph         | m-graphs                          | time-series
+|---	    |---	            |---	            |---	            |---	                              | 
+| par    	| PCA             | PCA 	          | RDPG  	        | joint-embedding :white_check_mark:| Mr. Sid :white_check_mark: 
+| semi-par| GMRA :question: | GMRA :question: | HSBM :question: | JOFC :question: 	| :question:
+| kernel  | kernel-PCA      | kernal-PCA  	  |:question:       | :question:        | :question:
+| non-par | RerF :question: | RerF :question: | :question:      | :question:  	    | :question:
