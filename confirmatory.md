@@ -46,7 +46,9 @@ SC: spectral clustering. k-m: k-means. IDT: iterative denoising tree
 |     | metric |
 |---  |--- |
 | par | discriminability |
-non-par | MGC-discriminability :question: |
+| non-par | MGC-discriminability :question: |
+| non-par | class morphing :question: |
+
 
 ### low dimensional embedding
 
