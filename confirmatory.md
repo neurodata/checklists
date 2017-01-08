@@ -1,8 +1,8 @@
 ### hypothesis testing
 
-| test    	  | R^d  	              | 1-Graph  	|   	|   	|
+| test    	  | R^d  	              | 1-Graph  	|  1-Grute 	|   	|
 |---	        |---	                |---	|---	|---	|
-| 1-sample  	| parametric bootstrap| parametric bootstrap :question:  	|   	|   	|
+| 1-sample  	| parametric bootstrap| parametric bootstrap :question:  	| vertex-MGC :white_check_mark:  	|   	|
 | 2-sample  	| MGC :question:| semipar :question: 	|   	|   	|
 | k-sample  	| MGC :question:| semipar :question:  	|   	|   	|
 | independent | MGC :white_check_mark:  |   	|   	|   	|
@@ -33,12 +33,12 @@ SC: spectral clustering. k-m: k-means. IDT: iterative denoising tree
 
 ### regression
 
-|   	    | low-d           | high-d    | 1-graph   | m-graphs | time-series
-|---	    |---	            |---	      |---	      |---	    |--- 
-| par  	  | linear   	      | LOL :question: 	    | SBM  	    | semipar :question:  	| 
-| semi-par| polynomial  	  | QOQ :question: 	    | DC-SCM    |  deltacon :question: 	| 
-| kernel  | SVR  	          | :question:  	    |:question: | :question:            |
-| non-par | RerF :question: | RerF :question:| robust vertex clustering |   	    | 
+|   	    | low-d           | high-d          | 1-graph   | m-graphs | time-series
+|---	    |---	            |---	            |---	      |---	    |--- 
+| par  	  | linear   	      | LOL :question: 	| PLS :question:   	    |  :question:  	| 
+| semi-par| polynomial  	  | QOQ :question: 	| :question:    |   :question: 	| 
+| kernel  | SVR  	          | :question:  	  |:question: | :question:            |
+| non-par | RerF :question: | RerF :question: | :question: | :question:  	    | 
 
 
 ### action/control
