@@ -1,4 +1,4 @@
-upon believing that you have completed work sufficient to write a peer reviewed manuscript, follow the following steps, basically in order):
+upon believing that you have completed work sufficient to write a peer reviewed manuscript, follow the following steps, basically in order, for a methods paper, start with the methods section):
 
 1. 1 sentence summary (will become your title;  ~5 min)
 2. 1 paragraph summary (will become your abstract;  ~30 min)
