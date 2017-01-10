@@ -23,9 +23,4 @@ challenge?
 5. outline of discussion, to include
   1. bulleted list of previous related work (~20 min)
   2. bulleted list of potential extensions (~20 min)
-6. outline of methods, to include:
-  1. plain text description of algorithm
-  1. pseudocode
-  1. simulation settings
-  1. real data settings
-  1. evaluation dimensions (see [algorithms.md](algorithms.md))
+6. outline of methods, including 1 sentence for each of [these](https://github.com/neurodata/checklists/blob/master/methods_paper.md) points
