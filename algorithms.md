@@ -55,7 +55,7 @@ After running the code multiple times on a couple different scenarios, we determ
 
 ## Real Data Analysis
 
-There are two different scenarios of interest for real data: (i) those for which we are given a gold standard answer (often called the "truth", but even more often is a noisy estimate of the truth, if the truth even exists), and (ii) those for which no gold standard is available. For case (i), for predictions, when possible do 10-fold cross-validation.  For case (ii), the best thing we can do is compute "discriminability" (see [discriminability repo](https://github.com/neurodata/discriminability)).  In particular, given multiple measurements from multiple samples, compute how relatively similar the measurements from the same sample are, both before and after applying the algorithm.  If the algorithm is useful, it should increase discriminability. 
+There are two different scenarios of interest for real data: (i) those for which we are given a gold standard answer (often called the "truth", but even more often is a noisy estimate of the truth, if the truth even exists), and (ii) those for which no gold standard is available. For case (i), for predictions, when possible do 10-fold cross-validation.  For case (ii), the best thing we can do is compute "discriminability" (see [discriminability repo](https://github.com/neurodata/discriminability), [tutorial](http://docs.neurodata.io/checklists/Tutorials/R/Discriminability/discriminability_tutorial.html)).  In particular, given multiple measurements from multiple samples, compute how relatively similar the measurements from the same sample are, both before and after applying the algorithm.  If the algorithm is useful, it should increase discriminability. 
 
 
 
