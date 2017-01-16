@@ -11,8 +11,7 @@
     1. mean 
     2. median 
 2. scale estimate (heatmaps)
-    1. correlation matrix + cumulative variance (with elbows)
-    1. robust correlation matrix + cumulative variance (with elbows)
+    1. correlation matrix + cumulative variance with elbows (+ robust variant)
     1. matrix of energy distances
 3. density estimate
     4. 1D marginals (Violin + jittered scatter plot of each dimension  in n < 1000, heatmap of density otherwise)
@@ -21,8 +20,8 @@
 5. point compression
     1. k-means++ initialization (heatmap of k points)
     1. mclust++  (BIC curves)
-6. spectral analysis
-    1. (robust) cumulative variance (with elbows) of data matrix
+6. spectral analysis (+ robust variant)
+    1. cumulative variance (with elbows) of data matrix
     1. embedded features (pairs plot)
     1. eigenvectors (heatmap)
     1. cluster features (mclust++: color pairs plot by cluster & BIC curve)
