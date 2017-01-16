@@ -18,10 +18,10 @@
     4. 1D marginals (Violin + jittered scatter plot of each dimension  in n < 1000, heatmap of density otherwise)
     8. 2D marginals (Pairs plots for top ~8 dimensions if n<1000, 2D heatmaps otherwise)
 4. Outlier plot 
-5. vector quantize
+5. point reduction
     1. k-means++ initialization (heatmap of k points)
     1. mclust++  (BIC curves)
-6. feature quantize
+6. dimension reduction
     1. (robust) cumulative variance (with elbows) of data matrix
     1. (robust) cumulative variance (with elbows) of correlation matrix
     1. embedded features (pairs plot)
