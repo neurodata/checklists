@@ -11,20 +11,20 @@
     1. mean 
     2. median 
 2. scale estimate (heatmaps)
-    1. correlation matrix 
-    1. robust correlation matrix
+    1. correlation matrix + cumulative variance (with elbows)
+    1. robust correlation matrix + cumulative variance (with elbows)
     1. matrix of energy distances
 3. density estimate
     4. 1D marginals (Violin + jittered scatter plot of each dimension  in n < 1000, heatmap of density otherwise)
     8. 2D marginals (Pairs plots for top ~8 dimensions if n<1000, 2D heatmaps otherwise)
 4. Outlier plot 
-5. point reduction
+5. point compression
     1. k-means++ initialization (heatmap of k points)
     1. mclust++  (BIC curves)
-6. dimension reduction
+6. spectral analysis
     1. (robust) cumulative variance (with elbows) of data matrix
-    1. (robust) cumulative variance (with elbows) of correlation matrix
     1. embedded features (pairs plot)
+    1. eigenvectors (heatmap)
     1. cluster features (mclust++: color pairs plot by cluster & BIC curve)
 
 
@@ -37,8 +37,8 @@
     2. 1D marginals: violion plot, separated by child node
     1. 2D marginals: pairs plots, color coded by cluster, voronoi diagram overlaid
 1. outlier plot for each child node
-1. vector quantize per child
-1. feature quantize per child
+1. point compression per child
+1. spectral analysis per child
 
 
 
@@ -46,11 +46,8 @@
 
 ### Compression Options
 
-- when n>1000, to compress n, 
-    1. subsample uniformly at random, or
-    2. use k-means++ initialization to choose 1000 points. 
+- when n>1000, to compress n, use k-means++ initialization to choose 1000 points. 
 - when d>100, to compress d, 
-    1. subsample uniformly at random
     2. truncated PCA, using ZG{1,2,3} to select d, default to ZG-2 
     3. CUR decomposition
 
