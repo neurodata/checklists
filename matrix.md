@@ -23,7 +23,6 @@
 6. spectral analysis
     1. cumulative variance (with elbows) of data matrix
     1. eigenvectors (pairs plot + heatmap)
-    1. cluster analysis of features
 
 
 ### Iterate on results of mclust++ for each level, up to level 5 or so
