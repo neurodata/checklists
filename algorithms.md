@@ -76,6 +76,7 @@ Here, we will make a final pass over our algorithm with synthetic data in exactl
 1. call function using synthetic population. 
 1. generate plots to verify that the synthetic dataset performs exactly as expected, using quantitative descriptions wherever possible.
 
+NOTE: after the synthetic data step, the time to adapt to real data should be \<1 hours, as theoretically the only thing that will need to be done is accepting the real data as input at this point. The rest should entirely be "plug and play" with the exact code used for the synthetic dataset. 
 
 ## Real Data Analysis
 
