@@ -7,9 +7,8 @@
 ### For level 0
 
 0. Heat map of raw data that fits on screen (1000-means++ to select n, CUR to select d)
-1. 1st moment statistics (1 line plot)
-    1. mean 
-    2. median 
+1. 1st moment statistics
+    1. mean & median on line plot
 2. 2nd moment statistics
     1. correlation matrix (heatmap)
     1. cumulative variance with elbows
