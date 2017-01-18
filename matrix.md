@@ -6,7 +6,7 @@
 
 ### For level 0
 
-0. Heat map of raw data that fits on screen (1000-means++ to select n, CUR to select d)
+0. Heat map of raw data that fits on screen (k-means++ to select 1000 samples, CUR to select 100 dimensions)
 1. 1st moment statistics
     1. mean & median on line plot
 2. 2nd moment statistics
@@ -15,7 +15,7 @@
     1. matrix of energy distances (heatmap)
 3. density estimate
     4. 1D marginals (Violin + jittered scatter plot of each dimension,  if n > 1000 or d>10, density heatmaps)
-    8. 2D marginals (Pairs plots for top ~8 dimensions, if n>1000, 2D heatmaps)
+    8. 2D marginals (Pairs plots for top ~8 dimensions, if n*d>8000, 2D heatmaps)
 4. Outlier plot 
 5. cluster analysis (IDT++)
     1. BIC curves
@@ -31,13 +31,13 @@
 ### Iterate on results of mclust++ for each level, up to level 5 or so
 
 1. heatmap, sorted by child node
-1. location estimate per child + difference between children
-1. scale estimate per child + difference between children
+1. 1st order stats per child + difference between children
+1. 1st order stats per child + difference between children
 1. density estimate per child
     2. 1D marginals: violion plot, separated by child node
     1. 2D marginals: pairs plots, color coded by cluster, voronoi diagram overlaid
 1. outlier plot for each child node
-1. point compression per child
+1. cluster analysis per child
 1. spectral analysis per child
 
 
