@@ -7,19 +7,20 @@
 ### For level 0
 
 0. Heat map of raw data that fits on screen 
-1. location estimate (line plots)
+1. 1st moment statistics (1 line plot)
     1. mean 
     2. median 
-2. scale estimate (heatmaps)
-    1. correlation matrix + cumulative variance with elbows (+ robust variant)
-    1. matrix of energy distances
+2. 2nd moment statistics
+    1. correlation matrix (heatmap)
+    1. cumulative variance with elbows (+ robust variant)
+    1. matrix of energy distances (heatmap)
 3. density estimate
-    4. 1D marginals (Violin + jittered scatter plot of each dimension  in n < 1000, heatmap of density otherwise)
-    8. 2D marginals (Pairs plots for top ~8 dimensions if n<1000, 2D heatmaps otherwise)
+    4. 1D marginals (Violin + jittered scatter plot of each dimension,  if n < 1000 or d>10, density heatmaps)
+    8. 2D marginals (Pairs plots for top ~8 dimensions, if n<1000, 2D heatmaps)
 4. Outlier plot 
 5. point compression
     1. k-means++ initialization (heatmap of k points)
-    1. mclust++  (BIC curves)
+    1. mclust++  (BIC curves + heatmap of means & )
 6. spectral analysis (+ robust variant)
     1. cumulative variance (with elbows) of data matrix
     1. embedded features (pairs plot)
