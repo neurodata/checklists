@@ -8,10 +8,9 @@
 
 0. Heat map of raw data that fits on screen (k-means++ to select 1000 samples, CUR to select 100 dimensions)
 1. 1st moment statistics
-    1. mean & median on line plot
+    1. mean & median on (line plot + heatmap)
 2. 2nd moment statistics
     1. correlation matrix (heatmap)
-    1. cumulative variance with elbows
     1. matrix of energy distances (heatmap)
 3. density estimate
     4. 1D marginals (Violin + jittered scatter plot of each dimension,  if n > 1000 or d>10, density heatmaps)
@@ -23,8 +22,7 @@
     1. covariance matrix heatmaps
 6. spectral analysis
     1. cumulative variance (with elbows) of data matrix
-    1. embedded features (pairs plot)
-    1. eigenvectors (heatmap)
+    1. eigenvectors (pairs plot + heatmap)
     1. cluster analysis of features
 
 
