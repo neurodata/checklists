@@ -1,7 +1,7 @@
 ## Given a new set of n samples of vectors in R^d
 
-1. What fraction of features of each kind (binary, integer, non-negative, character, string etc.)
-2. What is the distribution of NaNs per row? Per column? Infs per row? Per column? "Zero" variance rows? columns?
+1. histogram of feature types (binary, integer, non-negative, character, string etc.)
+2. # NaNs per row? Per column? Infs per row? Per column? "Zero" variance rows? columns?
 
 
 ### For level 0
