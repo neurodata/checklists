@@ -6,7 +6,7 @@ The goal of the below protocol is to:
 2. can run it successfully
 3. can evaluate its performance meaningfully
 
-### (*[python notebook example](./Tutorials/Python/code_example.ipynb)*)
+### (*[python notebook example](./c)*)
 
 
 ## Algorithm 
@@ -65,6 +65,17 @@ After running the code multiple times on a couple different scenarios, we determ
 1. repeat the above 2 steps on the difficult simulation
 1. summarize performance on both settings
 
+## Synthetic Data Analysis
+
+Here, we will make a final pass over our algorithm with synthetic data in exactly the same format as our real inputs. Everything, down to the exact data structures used, should match the exact format the real data is anticipated to appear in. By this step, the researcher should know the format of the real data, and have an idea of how the real data will fit in to the algorithm. Also in this step, the researcher will think about how to best wrap their classes/methods so as to have as few moving parts as possible in the actual use of the algorithm.
+
+1. describe how you will simulate the population, using formulas as necessary, using your simulation developed above.
+1. define the minimum point at which the real data can differ from the synthetic data. This is the point at which you would load your raw data, and cannot in the scope of your analysis trace back ANY farther.
+1. plot synthetic raw data, as raw as possible, and verify that it matches the simulated data developed above.
+1. write a function that calls any moving parts to your algorithm, and accepts as inputs the minimum raw data.
+1. call function using synthetic population. 
+1. generate plots to verify that the synthetic dataset performs exactly as expected, using quantitative descriptions wherever possible.
+
 
 ## Real Data Analysis
 
@@ -74,11 +85,5 @@ After running the code multiple times on a couple different scenarios, we determ
 1. For each, describe the # of dimensions, # of samples, and any other salient features
 2. plot raw data, as raw as possible (i.e. all observed variables, latent variables, and parameters)
 3. predict performance accuracy of the algorithm for each dataset
-4. run *exact same code* on real data as ran on simulations, generating estimates, qualitative and quantitative results. 
+4. run *exact same code* on real data as ran on synthetic, generating estimates, qualitative and quantitative results. 
 5. document performance accuracy relative to predictions, modify understanding as appropriate.
-
-
-
-
-
-
