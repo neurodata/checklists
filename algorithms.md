@@ -9,6 +9,15 @@ The goal of the below protocol is to:
 ### (*[python notebook example](./Tutorials/Python/code_example.ipynb)*)
 
 
+## Algorithm 
+
+Doing the next three steps carefully & correctly implies that you understand the algorithm, at least in theory.
+
+1. write algorithm pseudocode
+1. write algorithm code
+1. write (in plain language) the conditions under which you think this algorithm will perform well, and those under which you think it will perform poorly.  If you want to be formal, you can write the particular model under which the algorithm has statistical guarantees.
+
+
 ## Simulation Data
 
 Code should always be tested to determine whether we can trust the results, this means testing to see that it works well when it should, and that it does not work well when it shouldn't.  Below we describe how to generate such simulations so that you can use them to test the code.
@@ -28,17 +37,20 @@ Code should always be tested to determine whether we can trust the results, this
 
 Here we actually test the code on the two above described settings.  Because the results are random, it is important to repeat the analysis multiple times.
 
-1. write algorithm pseudocode
-1. write algorithm code
+Note that we want to understand performance on simulated data, to help understand performance on real data. There are two different scenarios of interest for real data: (i) those for which we are given a gold standard answer (often called the "truth", but even more often is a noisy estimate of the truth, if the truth even exists), and (ii) those for which no gold standard is available. For case (i), for predictions, when possible do 10-fold cross-validation.  For case (ii), the best thing we can do is compute "discriminability" (see [repo](https://github.com/neurodata/discriminability), [tutorial](http://docs.neurodata.io/checklists/Tutorials/R/Discriminability/discriminability_tutorial.html)).  In particular, given multiple measurements from multiple samples, compute how relatively similar the measurements from the same sample are, both before and after applying the algorithm.  If the algorithm is useful, it should increase discriminability.
+
 1. describe in words how you think the algorithm will perform in the easy simulation
 1. generate simulated data
 1. run algorithm on simulated data
 1. plot results 
-1. describe the metric that you will use to quantify the results
+1. describe the metric that you will use to quantify the results when given the truth
+1. if real data does not have a reasonable "gold standard", also describe metric to quantify performance without gold standard
 1. write code to quantify the results
-1. quantify performance
-1. repeat 10x on the easy simulation
-1. repeat 10x on the hard simulation
+1. quantify performance (using 1 or both metrics)
+1. repeat 10x on the easy simulation, only plot >=1x 
+1. repeat 10x on the hard simulation, only plot >=1x
+
+
 
 ## Summarize Simulation Analysis
 
@@ -51,11 +63,10 @@ After running the code multiple times on a couple different scenarios, we determ
 1. run qualitative population analysis (ie, plot summary plots) on the simple simulation
 1. run quantitative population analysis (ie, compute population performance) on the simple simulation
 1. repeat the above 2 steps on the difficult simulation
+1. summarize performance on both settings
 
 
 ## Real Data Analysis
-
-There are two different scenarios of interest for real data: (i) those for which we are given a gold standard answer (often called the "truth", but even more often is a noisy estimate of the truth, if the truth even exists), and (ii) those for which no gold standard is available. For case (i), for predictions, when possible do 10-fold cross-validation.  For case (ii), the best thing we can do is compute "discriminability" (see [repo](https://github.com/neurodata/discriminability), [tutorial](http://docs.neurodata.io/checklists/Tutorials/R/Discriminability/discriminability_tutorial.html)).  In particular, given multiple measurements from multiple samples, compute how relatively similar the measurements from the same sample are, both before and after applying the algorithm.  If the algorithm is useful, it should increase discriminability. 
 
 
 
