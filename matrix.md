@@ -6,26 +6,27 @@
 
 ### For level 0
 
-0. Heat map of raw data that fits on screen 
+0. Heat map of raw data that fits on screen (1000-means++ to select n, CUR to select d)
 1. 1st moment statistics (1 line plot)
     1. mean 
     2. median 
 2. 2nd moment statistics
     1. correlation matrix (heatmap)
-    1. cumulative variance with elbows (+ robust variant)
+    1. cumulative variance with elbows
     1. matrix of energy distances (heatmap)
 3. density estimate
-    4. 1D marginals (Violin + jittered scatter plot of each dimension,  if n < 1000 or d>10, density heatmaps)
-    8. 2D marginals (Pairs plots for top ~8 dimensions, if n<1000, 2D heatmaps)
+    4. 1D marginals (Violin + jittered scatter plot of each dimension,  if n > 1000 or d>10, density heatmaps)
+    8. 2D marginals (Pairs plots for top ~8 dimensions, if n>1000, 2D heatmaps)
 4. Outlier plot 
-5. point compression
-    1. k-means++ initialization (heatmap of k points)
-    1. mclust++  (BIC curves + heatmap of means & )
-6. spectral analysis (+ robust variant)
+5. cluster analysis (IDT++)
+    1. BIC curves
+    1. mean line plot
+    1. covariance matrix heatmaps
+6. spectral analysis
     1. cumulative variance (with elbows) of data matrix
     1. embedded features (pairs plot)
     1. eigenvectors (heatmap)
-    1. cluster features (mclust++: color pairs plot by cluster & BIC curve)
+    1. cluster analysis of features
 
 
 ### Iterate on results of mclust++ for each level, up to level 5 or so
@@ -44,12 +45,6 @@
 
 ----
 
-### Compression Options
-
-- when n>1000, to compress n, use k-means++ initialization to choose 1000 points. 
-- when d>100, to compress d, 
-    2. truncated PCA, using ZG{1,2,3} to select d, default to ZG-2 
-    3. CUR decomposition
 
 ### Scaling Options
 
@@ -65,7 +60,7 @@
     
 ### robust options
 
-- use [Geometric median and robust estimation in Banach spaces](http://projecteuclid.org/euclid.bj/1438777595) to obtain robust estimates of location and scale
+- use [Geometric median and robust estimation in Banach spaces](http://projecteuclid.org/euclid.bj/1438777595) to obtain robust estimates of 1st and 2nd moments
 
 ### if features have categories
 
