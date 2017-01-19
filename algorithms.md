@@ -13,15 +13,17 @@ The details of this protocol are constantly being revised on the basis of extrem
 
 ## Do you understand the algorithm sufficiently well to run it at all?
 
-If you exceed 1 hr on step 4, then answer is no, go to Section XXX 
 
 1. write *detailed* pseudocode
-1. if code does not exist, write algorithm code 
+1. write algorithm code 
 1. write (in plain language) the conditions under which you think this algorithm will perform well, and those under which you think it will perform poorly.  If you want to be formal, you can write the particular model under which the algorithm has statistical guarantees.
-1. find data (simulated or real) for which you know what the answer will be.  In particular, this includes two datasets:
-    1. data for which the algorithm will do well
-    2. data for which the algorithm will not do well
+1. find two datasets for which you know what the answer will be (ideally real, but simulated is ok).  In particular, this includes two datasets:
+    1. data for which you expect that the algorithm will do well
+    2. data for which you expect that the algorithm will *not* do well
 The reason for these is: of course you want to confirm that it does well when it should, but it is easy to accidentally write code where the algorithm also does well when it shouldn't.  For example, if the algorithm always outputs the same answer, you would be able to determine that for these.
+1. For each, describe the # of dimensions, # of samples, and any other salient features that the algorithm would require to run (e.g., file type, etc.).
+1. Plot raw data, as raw as possible (i.e. the whole multivariate time-series, rather than summary statistics).
+1. State predictions of how well you expect the algorithm to run on these two datasets.
 
 
 ## Sanity check: does it work as expected on simple toy examples?
@@ -39,6 +41,7 @@ Code should always be tested to determine whether we can trust the results, this
 2. plot simulated data, as raw as possible (ie, all observed variables, latent variables, and parameters)
 3. report whether it looks "right"
 2. repeat the above for a simulation setting for which the alg will *not* perform well (because it is difficult for a given sample size).  
+
 
 ### Analyze toy simulation data
 
@@ -75,13 +78,6 @@ After running the code multiple times on a couple different scenarios, we determ
 
 ##  Real data run: does it work as expected on real data?
 
-### Real Data Description
-
-Now we find real data, and make sure that we understand it, prior to doing any analysis on it. 
-
-1. Find two different real datasets, at least 1 for which somebody else has evidence that there is "signal"
-1. For each, describe the # of dimensions, # of samples, and any other salient features
-2. Plot raw data, as raw as possible (i.e. the whole multivariate time-series, rather than summary statistics)
 
 
 ### Synthetic Data Analysis
