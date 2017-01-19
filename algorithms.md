@@ -1,10 +1,9 @@
 ## Overview
 
 1. We will learn the following in order by following the below steps?
-    1. Do you understand the algorithm sufficiently well to run it at all? If yes, go to Section 2. If no, go to Section XXX
-    2. Sanity check: does it work as expected on simple toy examples? If yes, go to Section 3. If no, go to Section XXX
-    3. Real data run: does it work as expected on real data? If yes, go to Section 4. If no, go to Section XXX
-    4. Determine on which kinds of data do we expect it to work well, and which do we expect it to not work well?
+    1. Do you understand the algorithm sufficiently well to run it at all? 
+    2. Sanity check: does it work as expected on simple toy examples? 
+    3. Real data run: does it work as expected on real data? 
 1. An example? Here is a (*[python notebook example of an older format](https://github.com/neurodata/checklists/blob/master/Tutorials/Python/code_example.ipynb)*)
 
 
@@ -22,8 +21,11 @@ The details of this protocol are constantly being revised on the basis of extrem
 1. Plot raw data, as raw as possible (i.e. the whole multivariate time-series, rather than summary statistics).
 1. State predictions of how well you expect the algorithm to run on these two datasets.
 
+If you think you understand and can run this algorithm on your data, skip to #Real.
 
-## Sanity check: does it work as expected on simple toy examples?
+
+
+##Sanity check: does it work as expected on simple toy examples?
 
 ### Generate toy simulation data
 
@@ -73,7 +75,7 @@ After running the code multiple times on a couple different scenarios, we determ
 
 
 
-##  Real data run: does it work as expected on real data?
+##Real data run: does it work as expected on real data?
 
 
 
