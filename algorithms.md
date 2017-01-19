@@ -2,10 +2,10 @@
 
 1. We will learn the following in order by following the below steps?
     1. Do you understand the algorithm sufficiently well to run it at all? 
-    2. Sanity check: does it work as expected on simple toy examples? 
-    3. Real data run: does it work as expected on real data? 
+    2. Does it work as expected on simple toy examples? 
+    3. Does it work as expected on real data? 
 1. An example? Here is a (*[python notebook example of an older format](https://github.com/neurodata/checklists/blob/master/Tutorials/Python/code_example.ipynb)*)
-
+1. Once you finish these steps, the next step is: "Deteremine what kinds of data will the algorithm work well on, and when not?"
 
 The details of this protocol are constantly being revised on the basis of extremely valuable feedback.  If there is something you don't love about it, or have an idea to make it better, please [suggest it](https://github.com/neurodata/checklists/issues/new)!
 
@@ -25,7 +25,7 @@ If you think you understand and can run this algorithm on your data, skip to [Re
 
 
 
-##Sanity check: does it work as expected on simple toy examples?
+## Does it work as expected on simple toy examples?
 
 ### Generate toy simulation data
 
@@ -75,8 +75,7 @@ After running the code multiple times on a couple different scenarios, we determ
 
 
 
-##Real data run: does it work as expected on real data?
-
+## Does it work as expected on real data?
 
 
 ### Synthetic Data Analysis
