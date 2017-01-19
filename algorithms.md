@@ -21,7 +21,7 @@ The details of this protocol are constantly being revised on the basis of extrem
 1. Plot raw data, as raw as possible (i.e. the whole multivariate time-series, rather than summary statistics).
 1. State predictions of how well you expect the algorithm to run on these two datasets.
 
-If you think you understand and can run this algorithm on your data, skip to [#Real].
+If you think you understand and can run this algorithm on your data, skip to [Real Data Section](#Real).
 
 
 
