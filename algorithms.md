@@ -1,24 +1,32 @@
+## Overview
+
+1. We will learn the following in order by following the below steps?
+    1. Do you understand the algorithm sufficiently well to run it at all? If yes, go to Section 2. If no, go to Section XXX
+    2. Sanity check: does it work as expected on simple toy examples? If yes, go to Section 3. If no, go to Section XXX
+    3. Real data run: does it work as expected on real data? If yes, go to Section 4. If no, go to Section XXX
+    4. Determine on which kinds of data do we expect it to work well, and which do we expect it to not work well?
+1. An example? Here is a (*[python notebook example of an older format](https://github.com/neurodata/checklists/blob/master/Tutorials/Python/code_example.ipynb)*)
 
 
-The goal of the below protocol is to:
-
-1. determine whether you understand the basic principles of a given algorithm
-2. can run it successfully
-3. can evaluate its performance meaningfully
-
-### (*[python notebook example of an older format](./c)*)
+The details of this protocol are constantly being revised on the basis of extremely valuable feedback.  If there is something you don't love about it, or have an idea to make it better, please [suggest it](https://github.com/neurodata/checklists/issues/new)!
 
 
-## Algorithm 
+## Do you understand the algorithm sufficiently well to run it at all?
 
-Doing the next three steps carefully & correctly implies that you understand the algorithm, at least in theory.
+If you exceed 1 hr on step 4, then answer is no, go to Section XXX 
 
-1. write algorithm pseudocode
-1. write algorithm code
+1. write *detailed* pseudocode
+1. if code does not exist, write algorithm code 
 1. write (in plain language) the conditions under which you think this algorithm will perform well, and those under which you think it will perform poorly.  If you want to be formal, you can write the particular model under which the algorithm has statistical guarantees.
+1. find data (simulated or real) for which you know what the answer will be.  In particular, this includes two datasets:
+    1. data for which the algorithm will do well
+    2. data for which the algorithm will not do well
+The reason for these is: of course you want to confirm that it does well when it should, but it is easy to accidentally write code where the algorithm also does well when it shouldn't.  For example, if the algorithm always outputs the same answer, you would be able to determine that for these.
 
 
-## Simulation Data
+## Sanity check: does it work as expected on simple toy examples?
+
+### Generate toy simulation data
 
 Code should always be tested to determine whether we can trust the results, this means testing to see that it works well when it should, and that it does not work well when it shouldn't.  Below we describe how to generate such simulations so that you can use them to test the code.
 
@@ -30,10 +38,9 @@ Code should always be tested to determine whether we can trust the results, this
 1. write code to plot simulated data
 2. plot simulated data, as raw as possible (ie, all observed variables, latent variables, and parameters)
 3. report whether it looks "right"
-2. repeat the above for a simulation setting for which the alg will *not* perform well (because it is difficult  for a given sample size).  
+2. repeat the above for a simulation setting for which the alg will *not* perform well (because it is difficult for a given sample size).  
 
-
-## Simulation Analysis
+### Analyze toy simulation data
 
 Here we actually test the code on the two above described settings.  Because the results are random, it is important to repeat the analysis multiple times.
 
@@ -51,8 +58,7 @@ Note that we want to understand performance on simulated data, to help understan
 1. repeat 10x on the hard simulation, only plot >=1x
 
 
-
-## Summarize Simulation Analysis
+### Summarize Toy Simulation Analysis
 
 After running the code multiple times on a couple different scenarios, we determine whether the algorithm works "well" in general when it should, and works poorly in general, when it should not work well.
 
@@ -66,7 +72,10 @@ After running the code multiple times on a couple different scenarios, we determ
 1. summarize performance on both settings
 
 
-## Real Data Description
+
+##  Real data run: does it work as expected on real data?
+
+### Real Data Description
 
 Now we find real data, and make sure that we understand it, prior to doing any analysis on it. 
 
@@ -75,7 +84,7 @@ Now we find real data, and make sure that we understand it, prior to doing any a
 2. Plot raw data, as raw as possible (i.e. the whole multivariate time-series, rather than summary statistics)
 
 
-## Synthetic Data Analysis
+### Synthetic Data Analysis
 
 Here, we will make a final pass over our algorithm with synthetic data in exactly the same format as our real inputs. Everything, down to the exact data structures used, should match the exact format the real data is anticipated to appear in. By this step, the researcher should know the format of the real data, and have an idea of how the real data will fit in to the algorithm. Also in this step, the researcher will think about how to best wrap their classes/methods so as to have as few moving parts as possible in the actual use of the algorithm.
 
@@ -95,3 +104,4 @@ NOTE: after the synthetic data step, the time to adapt to real data should be mi
 3. predict performance accuracy of the algorithm for each dataset
 4. run *exact same code* on real data as ran on synthetic, generating estimates, qualitative and quantitative results. 
 5. document performance accuracy relative to predictions, modify understanding as appropriate.
+1. suggest ways to improve performance
