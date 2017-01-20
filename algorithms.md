@@ -13,7 +13,7 @@ The details of this protocol are constantly being revised on the basis of extrem
 
 ## Algorithm
 
-The purpose of this section is to determine whether you understand the algorithm sufficiently well to run it at all?
+The purpose of this section is to determine whether you understand the algorithm and the data sufficiently well to run this algorithm on the real data?
 
 
 1. write *detailed* pseudocode
