@@ -1,16 +1,19 @@
 ## Overview
 
-1. We will learn the following in order by following the below steps?
+1. We will learn the following:
     1. Do you understand the algorithm sufficiently well to run it at all? 
-    2. Does it work as expected on simple toy examples? 
-    3. Does it work as expected on real data? 
+    2. How well does it work  on simple toy examples? 
+    3. How well does it work on real data? 
 1. An example? Here is a (*[python notebook example of an older format](https://github.com/neurodata/checklists/blob/master/Tutorials/Python/code_example.ipynb)*)
-1. Once you finish these steps, the next step is: "Deteremine what kinds of data will the algorithm work well on, and when not?"
+1. Once you finish these steps, the next step to benchmark performance relative to other potential algorithms.
 
 The details of this protocol are constantly being revised on the basis of extremely valuable feedback.  If there is something you don't love about it, or have an idea to make it better, please [suggest it](https://github.com/neurodata/checklists/issues/new)!
 
 
-## Do you understand the algorithm sufficiently well to run it at all?
+
+## Algorithm
+
+The purpose of this section is to determine whether you understand the algorithm sufficiently well to run it at all?
 
 
 1. write *detailed* pseudocode
@@ -21,11 +24,15 @@ The details of this protocol are constantly being revised on the basis of extrem
 1. Plot raw data, as raw as possible (i.e. the whole multivariate time-series, rather than summary statistics).
 1. State predictions of how well you expect the algorithm to run on these two datasets.
 
-If you think you understand and can run this algorithm on your data, skip to [Real Data Section](#real-data-run-does-it-work-as-expected-on-real-data).
 
 
+## Simulation
 
-## Does it work as expected on simple toy examples?
+The purpose of this section is twofold:
+
+1. Get comfortable running the algorithm.
+2. Understand when you expect the algorithm to work well, and when not.
+
 
 ### Generate toy simulation data
 
@@ -74,8 +81,7 @@ After running the code multiple times on a couple different scenarios, we determ
 1. summarize performance on both settings
 
 
-
-## Does it work as expected on real data?
+## Real Data
 
 
 ### Synthetic Data Analysis
@@ -92,10 +98,12 @@ Here, we will make a final pass over our algorithm with synthetic data in exactl
 NOTE: after the synthetic data step, the time to adapt to real data should be minutes, as theoretically the only thing that will need to be done is accepting the real data as input at this point. The rest should entirely be "plug and play" with the exact code used for the synthetic dataset. 
 
 
-## Real Data Analysis
+### Real Data Analysis
 
 
 3. predict performance accuracy of the algorithm for each dataset
 4. run *exact same code* on real data as ran on synthetic, generating estimates, qualitative and quantitative results. 
-5. document performance accuracy relative to predictions, modify understanding as appropriate.
+5. document performance accuracy relative to predictions, modify understanding as appropriate. 
+1. document your opinion about how you expect this algorithm to perform on other datasets.  Justify your opinion via pointing to both qualitative and quantitative analyses on the real data and potentially on the simulation as well.
 1. suggest ways to improve performance
+
