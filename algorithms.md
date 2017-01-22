@@ -107,3 +107,5 @@ NOTE: after the synthetic data step, the time to adapt to real data should be mi
 1. document your opinion about how you expect this algorithm to perform on other datasets.  Justify your opinion via pointing to both qualitative and quantitative analyses on the real data and potentially on the simulation as well.
 1. suggest ways to improve performance
 
+
+NOTE: running algorithms is an art.  just because you can successfully reproduce somebody else's previous results, does *not* mean that you have mastered the art of running the algorithm.  In particuar, all algorithms have a number of exposed or hidden parameters, including for example convergence criteria.  By nature, authors of algorithms set default values of these appropriate for their applications, on their data and hardware.  So, failure to achieve good results using standard methods on problems for which they "ought" to do well often reflects failure of mastery of the algorithm, rather than the algorithm itself.  
