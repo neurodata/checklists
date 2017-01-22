@@ -30,9 +30,15 @@ ideally, this is stated using statistical decision theoretical language.
 
 1. simulated numerical support: run simulation that demonstrates that the theoretical result hold empirically as well (these might be the above illustrative example). compare to benchmarks.
 1. simluated numerical extension: run simulations that extend beyond the limitations of the theory (if the method is parametric), for example, demonstrate robustness, or finite sample properties. compare to benchmarks, ideally using a reference suite of simulated examples.
+1. Computational properties: eg, worst case computational space and time requirements as a function of n & p, and possibly T (# of threads), and other data parameters such as K (# of cluster), d (# of dimensions embedded into), etc.
 1. real data examples: demonstration that the performance also improves performance on real data examples, relative to previously existing tools, ideally using a reference suite of real data examples. 
 1. synthetic data analysis: generate data as close to real data as possible, and run same analysis, to assess the degree of credance we lend to the results on the real data.
 
 
+### How well does it care along other desirable dimensions?
 
-for a good example, see my [signal subgraph paper](http://ieeexplore.ieee.org/document/6341752/)
+
+See [prgmatic algorithm properties](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md#pragmatic-properties) for  details.
+
+
+for a reasonable example, see my [signal subgraph paper](http://ieeexplore.ieee.org/document/6341752/)
