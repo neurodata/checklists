@@ -1,7 +1,8 @@
 a good methods paper is organized by and has the components:
 
 
-### methods
+## methods
+
 1. setting: explain the setting.  for example, we are given n samples in R^d, and we want to estimate a density.
 1. model: explain the model under which we are operating on.  
 this may be a nonparametric model, in which we consider all possible distrutions on R^d, or a parametric model. 
@@ -13,9 +14,9 @@ ideally, this is stated using statistical decision theoretical language.
 1. algorithm: describe algorithm first in words, then provide pseudocode. description should include any hyper-parameters.
 
 
-### results
+## results
 
-### Why does it work well?
+### Why would it work well?
 
 1. provide geometric intuition as to why this algorithm should work well under certain contexts/s settings.  
 1. Support this geometic intuition with concrete simulated examples, in particular: 
@@ -24,7 +25,7 @@ ideally, this is stated using statistical decision theoretical language.
 1. prove theoretical properties about method. this means provide theoretical guarantees of performance along >=1 of the desired properties from [here](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md). this includes proving when it is (and is not) optimal.
 
 
-### Why does it work well / not well
+### How well does it work?
 
 
 1. simulated numerical support: run simulation that demonstrates that the theoretical result hold empirically as well (these might be the above illustrative example). compare to benchmarks.
