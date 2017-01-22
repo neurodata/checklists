@@ -27,6 +27,11 @@ this is a list of algorithmic properties that one may desire to use to evaluate 
     1. if not, how much does it cost?
     2. if so, in what language(s)?
 4. does it have a reasonable license
+5. documentation
+    1. is it documented?
+    1. are there tutorials?
+    1. does anybody respond to issues?
+    1. is there a user community?
 
 ## Theoretical Properties
 
