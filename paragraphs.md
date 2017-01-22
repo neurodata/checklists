@@ -9,7 +9,7 @@ things to check for each paragraph
 9. when introducing a novel concept/word/equation/notation/etc., always explain it *before* usage, rather than after; else the reader will not understand when reading it, and we don't want that!
 3. first sentence of every paragraph describes the entire paragraph
 3. last sentence of every paragraph links to next paragraph
-4. re-word passive tense, "it can be shown", to active, "we show"
+4. re-word passive tense, "it can be shown", to active, "we show" (but without "we")
 5. make sure tense is consistent within a paragraph.  and past tense is only for things that you or other people did.
 6. no need to write, "Next, we ...", the structure of the paragraphs should flow into one another.
 1. whenever possible, use familiar terms/notation.
