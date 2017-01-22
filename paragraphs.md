@@ -1,18 +1,23 @@
 things to check for each paragraph
 
+1. is each paragraph about a single concrete and coherent idea?  
+  1. does the first sentence of the paragraph introduces this idea?  
+  2. do all subsequent sentences in the paragraph further clarify the first sentence?
+  3. did you use transitional words to establish logical relationship between sentences?
+  6. did you ever write anything like,  "Next, we ..."?  If so, remove, the structure of the paragraphs should flow into one another.
+  2. did you sequence light to heavy: so the earlier sentences that start light/succint, follow-up with "heavy" details?
+  3. does the last sentence of every paragraph link it to next paragraph?
+1. Tense
+  5. Is the tense consistent within each paragraph?  
+  1. Is it past tense only for things that you or other people did previously?
+  1. are there any passive tense phrases (e.g., "it can be shown")? If so, revise to active tense.
+1. any time you introduce a new concept
+  1. Have other people discussed this concept? If so, did you use familiar notation/naming conventions? If not, have you clarifed/justified the difference?
+  1. If you've introduced 1 new concept, have you used the name of that topic consistently? And never use any other term (to bury the concept in their mind)?
+  9. When introducing a novel concept/word/equation/notation/etc., did you explain it *before* usage, rather than after (else the reader will not understand when reading it, and we don't want that)?
+  
+  
 
-1. sequence old to new: start with previously introduced concepts before exposing readers to new concepts (eg, when introducing new notation, define it before first use)
-2. sequence light to heavy: sequence sentences with sentences that start light/succint, follow-up with "heavy" details
-3. use transitional words to establish logical relationship between sentences
-4. use "echo words", ie, be consistent with nomenclature to bury the concept into their heads
-5. use strong verbs, action verbs, rather than passive verbs.
-9. when introducing a novel concept/word/equation/notation/etc., always explain it *before* usage, rather than after; else the reader will not understand when reading it, and we don't want that!
-3. first sentence of every paragraph describes the entire paragraph
-3. last sentence of every paragraph links to next paragraph
-4. re-word passive tense, "it can be shown", to active, "we show" (but without "we")
-5. make sure tense is consistent within a paragraph.  and past tense is only for things that you or other people did.
-6. no need to write, "Next, we ...", the structure of the paragraphs should flow into one another.
-1. whenever possible, use familiar terms/notation.
 1. when providing a p-value, always specify which test statistic (and parameters) are used (never use a t-test).
 
 see this [youtube video](https://www.youtube.com/watch?v=rZxaSMzstB8) for details.
