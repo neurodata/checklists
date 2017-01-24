@@ -17,7 +17,7 @@ The purpose of this section is to determine whether you understand the algorithm
 
 
 1. write *detailed* pseudocode
-1. write algorithm code 
+1. write actual algorithm code 
 1. write (in plain language) the conditions under which you think this algorithm will perform well, and those under which you think it will perform poorly.  If you want to be formal, you can write the particular model under which the algorithm has statistical guarantees.
 1. find two datasets for which you know what the answer will be (ideally real, but simulated is ok), including: (i) one which you expect the algorithm will do well on, and (ii) one which you expect it will *not* do well on. The reason for these is: of course you want to confirm that it does well when it should, but it is easy to accidentally write code where the algorithm also does well when it shouldn't.  For example, if the algorithm always outputs the same answer, you would be able to determine that for these.
 1. For each, describe the # of dimensions, # of samples, and any other salient features that the algorithm would require to run (e.g., file type, etc.).
