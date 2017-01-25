@@ -8,7 +8,7 @@ things to check for each paragraph
   2. did you sequence light to heavy: so the earlier sentences that start light/succint, follow-up with "heavy" details?
   3. does the last sentence of every paragraph link it to next paragraph?
 1. Tense
-  5. Is the tense consistent within each paragraph?  
+  5. Is the tense consistent within each paragraph (results are past tense)?
   1. Is it past tense only for things that you or other people did previously?
   1. are there any passive tense phrases (e.g., "it can be shown")? If so, revise to active tense.
 1. any time you introduce a new concept
