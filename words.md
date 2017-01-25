@@ -29,3 +29,4 @@ check for these words, and remove/replace as appropriate
 25. a priori --> should be italics
 1. we want to --> we (though should be reworded to avoid "we" entirely)
 1. Fig, Fig., fig --> Figure
+1. we chose appropriate --> we chose
