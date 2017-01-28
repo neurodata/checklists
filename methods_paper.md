@@ -8,8 +8,7 @@ a good methods paper is organized by and has the components:
 this may be a nonparametric model, in which we consider all possible distrutions on R^d, or a parametric model. 
 if it is parametric, explicitly enumerate the assumptions relative to the nonparametric model.
 1. goal: explain the goal, formally.  this almost always means either obtaining a test with high power, 
-or an estimator with low expected loss, or a decision process with low regret.  
-ideally, this is stated using statistical decision theoretical language.
+or an estimator with low expected loss, or a decision process with low regret.  ideally, this is stated using statistical decision theoretical language.
 1. desiderata: [here](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md) is a list of algorithm properties.  the desiderata should typically be particular goals for a subset of these properties.
 1. algorithm: describe algorithm first in words, then provide pseudocode. description should include any hyper-parameters.
 
