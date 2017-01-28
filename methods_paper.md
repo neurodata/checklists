@@ -18,7 +18,7 @@ or an estimator with low expected loss, or a decision process with low regret.  
 
 1. write a paragraph providing geometric intuition as to why this algorithm should work well under certain contexts/s settings, which includes writing which contexts you think it should work well.  
 1. Support this geometic intuition with concrete simulated examples, in particular: 
-  1. good illustrative example: a figure illustrating that the method achieves the goal in the setting under which we expect it to.  ideally, in the introduction of the manuscript we've already explained that there is a **gap** that we are filling, so this figure should demonstrate that this method fills this gap, and also illustrate that the other methdos fail here.
+  1. good illustrative example: a figure illustrating that the method achieves the goal in the setting under which we expect it to.  ideally, in the introduction of the manuscript we've already explained that there is a **gap** that we are filling, so this figure should demonstrate that this method fills this gap, and also illustrate that the other methdos fail here. note that this figure should clearly indicate the simulated truth and the error of the algorithm.
   1. bad illustrative example: same deal, but this time, illustrating that it does not work much worse than other algorithms in settings for which we expect it not to do better.
 1. prove theoretical properties about method. this means provide theoretical guarantees of performance along >=1 of the desired properties from [here](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md). this includes proving when it is (and is not) optimal.
 
