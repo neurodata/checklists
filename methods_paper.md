@@ -1,6 +1,7 @@
 a good methods paper is organized by and has the components:
 
 
+
 ## methods
 
 1. setting: explain the setting.  for example, we are given n samples in R^d, and we want to estimate a density.
