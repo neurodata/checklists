@@ -1,7 +1,7 @@
 upon believing that you have completed work sufficient to write a peer reviewed manuscript, follow the following steps, basically in order, for a methods paper, start with the methods section):
 
-1. 1 sentence summary (will become your title;  ~5 min)
-2. 1 paragraph summary (will become your abstract;  ~30 min)
+1. 1 sentence summary (will become your **title**;  ~5 min)
+2. 1 paragraph summary (will become your **abstract**;  ~30 min)
   1. big opportunity sentence: what is the grandest opportunity that this work is addressing?
   1. specific opportunity: what opportuntity specifically will this manuscript address?
   2. challenge sentence: what is hard about addressing this opportunity?
@@ -10,17 +10,13 @@ upon believing that you have completed work sufficient to write a peer reviewed 
   4. resolution sentence: what changes for the reader now that you have met this
 challenge? 
 
-3. 5 paragraph intro
+3. 5 paragraph **intro**
   3. bulleted list of  ~3-5 main factors that create an opportunity for your work (~20 min)
   4. 1 sentence summary of the **gap**, that is, the key ingredient that is missing (~5 min)
   4. bulleted list of the ~3-5 main challenges that must be overcome (~20 min)
   4. 2-3 sentence summary of what you did (~5 min)
   5. 2-3 sentence summary on how your work changes the world (~5 min)
-4. outline the results: list the evidence that supports that you filled the gap (the fewer points you need, the better)
-  1. 1 sentence summary of result 1, and a description of the figure that makes the point as clearly as possible, without making any other extraneous points (~5 min).
-  2. same for result 2.
-  3. etc.
+4. outline the methods and results, this is a 1 sentence summary of every point  in [methods_paper](https://github.com/neurodata/checklists/blob/master/methods_paper.md) (~20 min)
 5. outline of discussion, to include
   1. bulleted list of previous related work (~20 min)
   2. bulleted list of potential extensions (~20 min)
-6. outline of methods, including 1 sentence for each of [these](https://github.com/neurodata/checklists/blob/master/methods_paper.md) points
