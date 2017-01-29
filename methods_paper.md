@@ -7,6 +7,7 @@ a good methods paper is organized by and has the components:
 ### setting
 
 1. task: explain the task.  for example, we are given n samples in R^d, and we want to estimate a density.
+1. loss function: state the loss function in words and latex.
 1. statistical goal: 
   1. explain the statistical goal in words.  this almost always means either obtaining a test with high power, 
 or an estimator with low expected loss, or a decision process with low regret.  ideally, this is stated using statistical decision theoretical language.
