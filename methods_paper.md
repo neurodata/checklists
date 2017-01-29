@@ -55,7 +55,7 @@ or an estimator with low expected loss, or a decision process with low regret.  
 1. synthetic data analysis: generate data as close to real data as possible, and run same analysis, to assess the degree of credance we lend to the results on the real data.
 
 
-### How well does it care along other desirable dimensions?
+### How well does it perform along other desirable dimensions?
 
 
 Make a table of [pragmatic algorithm properties](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md#pragmatic-properties). Columns are properties, rows are algorithms.
