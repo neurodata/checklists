@@ -43,8 +43,8 @@ or an estimator with low expected loss, or a decision process with low regret.  
 
 
 1. simulated numerical support: 
-  1. describe (in words and equations) simulated example that demonstrates that the theoretical result hold empirically as well (these might be the above illustrative example). 
-  1. run algorithm on 10x examples, compute metric, plot distribution of metrics.
+  1. describe (in words and equations) simulated example that demonstrates that the above intuitions hold empirically as well (these might be the above illustrative example).  
+  1. both both a postive and negative case, run algorithm on 10x examples, compute metric, plot distribution of metrics.
 1. simluated numerical extension: 
   1. describe (in words and equations)  simulations that extend beyond the limitations of the theory (if the method is parametric), for example, demonstrate robustness, or finite sample properties. ideally use a reference suite of simulated examples.
   1. run alg on >10x examples, compute metric, plot distribution of metrics. compare to reference algs. 
