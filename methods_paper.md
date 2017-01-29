@@ -32,9 +32,9 @@ or an estimator with low expected loss, or a decision process with low regret.  
   1. concrete settings under which algorithm can get the right answer
   1. concrete settings under which algorithm is guaranteed to get the right answer
 1. Support this geometic intuition with concrete simulated examples, in particular: 
-  1. good illustrative example: 
+  1. positive illustrative example: 
     1. write (in latex) the generating distribution of data under which we expect the algorithm to perform well. ideally, in the introduction of the manuscript we've already explained that there is a **gap** that we are filling, so this simulation should demonstrate that this method fills this gap, and also illustrate that the other methdos fail here. 
-    1. postive illuatrative example: a figure illustrating that the method achieves the goal in the setting.  note that this figure should clearly indicate the simulated truth and the error of the algorithm. compare to reference algs.
+    1. a figure illustrating that the method achieves the goal in the setting.  note that this figure should clearly indicate the simulated truth and the error of the algorithm. compare to reference algs.
   1. negative illustrative example: same deal, but this time, illustrating that it does not work much worse than other algorithms in settings for which we expect it not to do better. compare to reference algs.
 1. prove theoretical properties about method. this means provide theoretical guarantees of performance along >=1 of the desired properties from [here](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md). this includes proving when it is (and is not) optimal.
 
@@ -46,7 +46,7 @@ or an estimator with low expected loss, or a decision process with low regret.  
   1. describe (in words and equations) simulated example that demonstrates that the above intuitions hold empirically as well (this might be the above positive example).  
   1. run algorithm on >=10x trials, compute metric, plot distribution of metrics.
 1. simluated numerical extension: 
-  1. describe (in words and equations)  simulations that extend beyond the limitations of the theory (if the method is parametric), for example, demonstrate robustness, or finite sample properties. ideally use a reference suite of simulated examples (this might be the 
+  1. describe (in words and equations)  simulations that extend beyond the limitations of the theory (if the method is parametric), for example, demonstrate robustness, or finite sample properties. ideally use a reference suite of simulated examples (this might be related to the above negative example) 
   1. run alg on >=10x trials, compute metric, plot distribution of metrics. compare to reference algs (this could  be the negative example).
 1. Computational properties: write down eg, worst case computational space and time requirements as a function of n & p, and possibly T (# of threads), and other data parameters such as K (# of cluster), d (# of dimensions embedded into), etc.
 1. real data examples: 
