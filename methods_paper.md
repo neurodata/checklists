@@ -19,9 +19,6 @@ or an estimator with low expected loss, or a decision process with low regret.  
 1. algorithm: 
   1. 1 paragraph high-level description of algorithm 
   1. pseudocode. input must include all hyper-parameters.
-1. model: 
-  1. explain the statistical model under which this algorithm can possibly get the right answer.  this may be a nonparametric model, in which we consider all possible distrutions on R^d, or a parametric model. if it is parametric, explicitly enumerate the assumptions relative to the nonparametric model. 
-  1. state whether it is ever guaranteed to get the right answer, and if so, under what conditions
 1. evaluation
   1. state how we will quantitatively evaluate performance in simulations (e.g., generating test data)
   1. state how we will quantitatively evaluate performance in real data (e.g., 10-fold cross-validation)
@@ -31,7 +28,9 @@ or an estimator with low expected loss, or a decision process with low regret.  
 
 ### Why would it work well?
 
-1. write a paragraph providing geometric intuition as to why this algorithm should work well under certain contexts/s settings, which includes writing which contexts you think it should work well.  
+1. write a paragraph providing geometric intuition as to why this algorithm should work well under certain contexts/s settings, which includes writing which contexts you think it should work well.  include if possible:
+  1. concrete settings under which algorithm can get the right answer
+  1. concrete settings under which algorithm is guaranteed to get the right answer
 1. Support this geometic intuition with concrete simulated examples, in particular: 
   1. good illustrative example: 
     1. write (in latex) the generating distribution of data under which we expect the algorithm to perform well. ideally, in the introduction of the manuscript we've already explained that there is a **gap** that we are filling, so this simulation should demonstrate that this method fills this gap, and also illustrate that the other methdos fail here. 
