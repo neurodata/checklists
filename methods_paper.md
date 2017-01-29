@@ -23,10 +23,9 @@ or an estimator with low expected loss, or a decision process with low regret.  
   1. explain the statistical model under which this algorithm can possibly get the right answer.  this may be a nonparametric model, in which we consider all possible distrutions on R^d, or a parametric model. if it is parametric, explicitly enumerate the assumptions relative to the nonparametric model. 
   1. state whether it is ever guaranteed to get the right answer, and if so, under what conditions
 1. evaluation
-  1. state how we will quantitatively evaluate performance in simulations and real data for which "gold standard" is available.  for example, 10-fold cross-validation. 
-  1. if in real data, no gold standard is available, also state the metric we will use to evaluate the data in that setting.
-
-
+  1. state how we will quantitatively evaluate performance in simulations (e.g., generating test data)
+  1. state how we will quantitatively evaluate performance in real data (e.g., 10-fold cross-validation)
+  
 
 ## results
 
