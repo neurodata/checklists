@@ -26,6 +26,8 @@ or an estimator with low expected loss, or a decision process with low regret.  
 
 ## results
 
+(for this alg and reference algs)
+
 ### Why would it work well?
 
 1. write a paragraph providing geometric intuition as to why this algorithm should work well under certain contexts/s settings, which includes writing which contexts you think it should work well.  include if possible:
@@ -50,8 +52,9 @@ or an estimator with low expected loss, or a decision process with low regret.  
   1. run alg on >=10x trials, compute metric, plot distribution of metrics. compare to reference algs (this could  be the negative example).
 1. Computational properties: write down eg, worst case computational space and time requirements as a function of n & p, and possibly T (# of threads), and other data parameters such as K (# of cluster), d (# of dimensions embedded into), etc.
 1. real data examples: 
-  1. describe >1 real data examples (ideally, use examples that previous authors have used to enable a fair comparison).
-  1. run algs on real data, plot results that demonstrate that the performance also improves performance on real data examples, relative to previously existing tools. 
+  1. describe >=1 real data examples (ideally, use examples that previous authors have used to enable a fair comparison).
+  1. run algs on real data, plot results that demonstrate that the performance also improves performance on real data examples, relative to previously existing tools.
+  1. plot/state run time for each alg.
 1. synthetic data analysis: generate data as close to real data as possible, and run same analysis, to assess the degree of credance we lend to the results on the real data.
 
 
