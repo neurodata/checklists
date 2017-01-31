@@ -64,4 +64,4 @@ or an estimator with low expected loss, or a decision process with low regret.  
 Make a table of [pragmatic algorithm properties](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md#pragmatic-properties). Columns are properties, rows are algorithms.
 
 
-for a reasonable example, see my [signal subgraph paper](http://ieeexplore.ieee.org/document/6341752/)
+for a reasonable example, see my [signal subgraph paper](http://ieeexplore.ieee.org/document/6341752/), or see [markdown demo](https://github.com/neurodata/checklists/blob/master/Tutorials/MATLAB/algs_example/methods_paper_example.md) for a quickie alpha version.
