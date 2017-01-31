@@ -2,11 +2,11 @@
 
 ### setting
 
-1. we are given $n$ samples of pairs $(x_i,y_i)$, $\mathcal{D}_n=\{(x_i,y_i)\}_{i \in [n]}$, where $x_i \in \mathcal{X} \subset \mathbb{R}^d$ and $y_i \in \mathcal{Y} = \{0,1\}$.  and we desire to train a classifier $g_n(x; \mathcal{D}_n): \mathcal{X} \times (\mathcal{X} \times \mathcal{Y})^n \rightarrow \mathcal{Y}$.
-2. we evaluate perform via the 0-1 loss, $\delta: \mathcal{X} \times \mathcal{Y} \rightarrow \{0,1\}$, meaning, $\delta(x,y) := \mathbb{I}[g_n(x) \neq y]$.
-1. learn a classifier that minimizes expected loss, that is:
+1. setting: we are given $n$ samples of pairs $(x_i,y_i)$, $\mathcal{D}_n=\{(x_i,y_i)\}_{i \in [n]}$, where $x_i \in \mathcal{X} \subset \mathbb{R}^d$ and $y_i \in \mathcal{Y} = \{0,1\}$.  and we desire to train a classifier $g_n(x; \mathcal{D}_n): \mathcal{X} \times (\mathcal{X} \times \mathcal{Y})^n \rightarrow \mathcal{Y}$.
+2. loss: we evaluate perform via the 0-1 loss, $\delta: \mathcal{X} \times \mathcal{Y} \rightarrow \{0,1\}$, meaning, $\delta(x,y) := \mathbb{I}[g_n(x) \neq y]$.
+1. statistical task: learn a classifier that minimizes expected loss, that is:
 $$\arg \min_{g_n \in \mathcal{G}_n} \mathbb{E}[\delta(x,y)].$$
-1. we desire an approach that:
+1. desiderata: we desire an approach that:
   2. works well in theory on certain settings
   3. empirically performs well on simulations according to those settings
   4. is robust to those assumptions (assuming there are assumptions)
@@ -16,7 +16,9 @@ $$\arg \min_{g_n \in \mathcal{G}_n} \mathbb{E}[\delta(x,y)].$$
 
 ### approach
 
-linear discriminant analysis estimates the pooled covariance matrix and the difference of means to learn the vector to projectiont the data on.  if the result is greater than the threshold (which is a function of the priors and means and covariance), it is in class 1, otherwise, class 0.
+paragraph description of alg: linear discriminant analysis estimates the pooled covariance matrix and the difference of means to learn the vector to projectiont the data on.  if the result is greater than the threshold (which is a function of the priors and means and covariance), it is in class 1, otherwise, class 0.
+
+#### pseudocode
 
 ```
 \begin{algorithm}
@@ -119,11 +121,14 @@ X=meas;
 cp=cvpartition(y,'k',10);
 classf = @(XTRAIN, ytrain, XTEST)(classify(XTEST,XTRAIN,ytrain));
 
+tic
 cvMCR=crossval('mcr',X,y,'predfun',classf,'partition',cp);
-
+toc
 cvMCR =
 
     0.0200
+
+Elapsed time is 1.272129 seconds.
 ```
 
 5. synthetic data analysis: not necessary for class
