@@ -6,13 +6,13 @@ a good methods paper is organized by and has the components:
 
 ### setting
 
-1. task: explain the task.  for example, we are given n samples in R^d, and we want to estimate a density.
-1. loss function: state the loss function in words and latex. 
-1. statistical goal: 
+1. state the task verbally and formally.  for example, we are given n samples in R^d, and we want to estimate a density.
+1. state the loss function verbally and formally.
+1. state the statistical goal verbally and formally.
   1. explain the statistical goal in words.  this almost always means either obtaining a test with high power, 
 or an estimator with low expected loss, or a decision process with low regret.  ideally, this is stated using statistical decision theoretical language.
-  1. formally write down the goal (in latex).
-1. desiderata: [here](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md) is a list of algorithm properties.  the desiderata should typically be particular goals for a subset of these properties.
+  1. formally write down the goal (using equations).
+1. state the desiderata of the method: [here](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md) is a list of algorithm properties.  the desiderata should typically be particular goals for a subset of these properties.
 
 ### approach
 
