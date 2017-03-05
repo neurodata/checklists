@@ -12,7 +12,8 @@ a good methods paper is organized by and has the components:
   1. explain the statistical goal in words.  this almost always means either obtaining a test with high power, 
 or an estimator with low expected loss, or a decision process with low regret.  ideally, this is stated using statistical decision theoretical language.
   1. formally write down the goal (using equations).
-1. state the desiderata of the method: [here](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md) is a list of algorithm properties.  the desiderata should typically be particular goals for a subset of these properties.
+1. state the computational goal.  for example, worst case performance requires quadratic space and time in sample size, and linear in dimension.
+1. state the additional desiderata of the method: [here](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md) is a list of algorithm properties.  the desiderata should typically be particular goals for a subset of these properties.
 
 ### approach
 
@@ -31,14 +32,16 @@ or an estimator with low expected loss, or a decision process with low regret.  
 ### Why would it work well?
 
 1. write a paragraph providing geometric intuition as to why this algorithm should work well under certain contexts/s settings, which includes writing which contexts you think it should work well.  include if possible:
-  1. concrete settings under which algorithm can get the right answer
-  1. concrete settings under which algorithm is guaranteed to get the right answer
+  1. (all) the settings under which algorithm can get the right answer
+  1. (all) the settings under which algorithm is guaranteed to get the right answer
 1. Support this geometic intuition with concrete simulated examples, in particular: 
   1. positive illustrative example: 
-    1. write (in latex) the generating distribution of data under which we expect the algorithm to perform well. ideally, in the introduction of the manuscript we've already explained that there is a **gap** that we are filling, so this simulation should demonstrate that this method fills this gap, and also illustrate that the other methdos fail here. 
+    1. write (verbally and formally) the generating distribution of data under which we expect the algorithm to perform well. ideally, in the introduction of the manuscript we've already explained that there is a **gap** that we are filling, so this simulation should demonstrate that this method fills this gap, and also illustrate that the other methdos fail here. 
     1. a figure illustrating that the method achieves the goal in the setting.  note that this figure should clearly indicate the simulated truth and the error of the algorithm. compare to reference algs.
   1. negative illustrative example: same deal, but this time, illustrating that it does not work much worse than other algorithms in settings for which we expect it not to do better. compare to reference algs.
-1. prove theoretical properties about method. this means provide theoretical guarantees of performance along >=1 of the desired properties from [here](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md). this includes proving when it is (and is not) optimal.
+1. prove theoretical properties about method, both statistical and computational. 
+    1. this means provide theoretical guarantees of performance along >=1 of the desired properties from [here](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md). 
+    1. this includes proving when it is (and is not) optimal.
 
 
 ### How well does it work?
