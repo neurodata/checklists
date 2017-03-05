@@ -7,8 +7,8 @@ a good methods paper is organized by and has the components:
 ### setting
 
 1. state the task verbally and formally.  for example, we are given n samples in R^d, and we want to estimate a density.
-1. state the loss function verbally and formally.
-1. state the statistical goal verbally and formally.
+1. state the loss function verbally and formally. for example, 0-1 loss, $\ell: \mathcal{X} - \mathcal{Y}$, $\ell(g(x),y)=0$ iff $g(x)==y$.  
+1. state the statistical goal verbally and formally. for example, minimize expected loss, $\argmin_{g \in \mathcal{G}} \mathbb{E}_F  || g(x) - y ||$, where the expectation is taken with respect to the join distribution, $F_{XY}$.  
   1. explain the statistical goal in words.  this almost always means either obtaining a test with high power, 
 or an estimator with low expected loss, or a decision process with low regret.  ideally, this is stated using statistical decision theoretical language.
   1. formally write down the goal (using equations).
