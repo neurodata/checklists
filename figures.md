@@ -83,13 +83,3 @@ the following checklist is for *explanatory figures* (including tables), which i
 23. Can it be converted to a figure? If so, do it (put table in appendix if you are scared of losing the information)!
 24. Are the rows sorted in a reasonable fashion (ie, according to the most important column)?
 14. Are the number of significant digits reasonable (eg, usually 2 is reasonable, 3 is not, in biology)?
-
-
-
-### Issues to make:
-
-- good/bad example for:
-	- line plot
-	- 2D scatter plot
-	- "distributions" plot
-	- heatmap
