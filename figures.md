@@ -1,8 +1,19 @@
 the following checklist is for *explanatory figures* (including tables), which is a special class of figures. other kinds of figures include "exploratory" and "schematic", which have somewhat different guidelines, and will be discussed elsewhere.
 
 
+### absolutely crucial
 
-### crucial
+(i don't ever want to see an explanatory figure without everyting on this list)
+1. Are all axes are labeled? with units?
+3. Are all font sizes legible from normal position?
+4. Are all lines labeled (e.g., in legend)? with clearly different colors?
+6. Are all the letters/numbers fully visible (i.e., not obscured by part of the figure)?
+8. Is there a title? does it provide context (e.g., sample size, dimensionality, dataset/simulation name, etc.)?
+
+
+
+
+### primary
 
 1. Does the main point of the figure "pop-out" to your audience (note: answering this question successfully requires knowing precisely what the main point is, and who your audience is.)?
 2. Is there any way to reduce cognitive load for the audience, and still make the same point?
