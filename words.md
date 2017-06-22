@@ -4,7 +4,7 @@ check for these words, and remove/replace as appropriate
 2. replace contractions with complete words (eg, don't --> do not)
 3. replace abbreviations with complete words (eg, Fig. --> Figure) 
 3. replace colloquialisms with more formal words (eg, nowadays --> recently)
-2. i, we, our, us, you, your --> rewrite sentence
+2. i, we, our, us, you, your --> rewrite sentence (almost always)
 3. in order to/for --> to/for
 4. clearly, obviously --> remove, might not be so clear/obvious to everyone
 5. this, it --> be specific,  can often be vague to which noun this/it is referring
