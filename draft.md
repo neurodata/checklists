@@ -11,12 +11,11 @@ upon believing that you have completed work sufficient to write a peer reviewed 
 challenge? 
 
 3. 5 paragraph **intro**
-
-        1. bulleted list of  ~3-5 main factors that create an opportunity for your work, filtering from most general to most specific, and not including anything ancillary (~20 min) 
-        4. 1 sentence summary of the **gap**, that is, the key ingredient that is missing (~5 min)
-        4. bulleted list of the ~3-5 main challenges that must be overcome (~20 min)
-        4. 2-3 sentence summary of what you did (~5 min)
-        5. 2-3 sentence summary on how your work changes the world (~5 min)
+    1. bulleted list of  ~3-5 main factors that create an opportunity for your work, filtering from most general to most specific, and not including anything ancillary (~20 min) 
+    4. 1 sentence summary of the **gap**, that is, the key ingredient that is missing (~5 min)
+    4. bulleted list of the ~3-5 main challenges that must be overcome (~20 min)
+    4. 2-3 sentence summary of what you did (~5 min)
+    5. 2-3 sentence summary on how your work changes the world (~5 min)
 4. outline the methods and results, this is a 1 sentence summary of every point  in [methods_paper](https://github.com/neurodata/checklists/blob/master/methods_paper.md) (~20 min)
 5. outline of discussion, to include
     1. bulleted list of previous related work (~20 min)
