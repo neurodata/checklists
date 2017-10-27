@@ -5,16 +5,15 @@ This is my continually evolving recommendation of the steps to take to build an 
 1. [Look at it](https://www.youtube.com/watch?v=EF8GhC-T_Mo)
 2. [Keep it simple](https://youtu.be/DWKijJ9n-VQ?t=45s)
 
-## Decisions to make (do first)
+## Decisions 
 
-
-1. Plot raw data, as raw as possible (i.e. the whole multivariate time-series, rather than summary statistics), to justify the algorithm and simulation settings.
-1. Name the precise algorithm will you be evaluating.
+1. Plot a few samples of the raw data, as raw as possible (i.e. the whole multivariate time-series, rather than summary statistics), to justify the algorithm and simulation settings.
+6. Describe the real data in detail, including of course sample size and dimensionality, the space each dimension lives in (e.g., binary, categorical, ordinal, real, network, image, etc.) as well as any other properties that you deem important for understanding performance of various algorithms.
+1. Name the precise algorithm will you be evaluating and provide a reference.
 1. Write pseudocode (as formally as you can) for the algorithm.
 2. Describe in detail (as formally as you can) the toy simulation settings that you will be using to evaluate this algorithm. This should include at least two settings, one for which you suspect the algorithm will work well, and another for which you think it should not. To make any algorithm perform poorly simply requires changing the distribution of the *noise*,  e.g., k-means will not work if the clusters are centered around some means with non-spherically symmetric covariances.
-3. describe the evaluation criteria, including # of trials, metrics, visualizations, and/or summary statistics (as formally as you can) that you will be using to evaluate the performance of the algorithm. recall that the simulations will be samples from random variables, so running on a single sample will provide limited information, instead, run on many samples and visualize all the results.
-4. describe in detail (as formally as you can) the synthetic simulation settings that you will be using to evaluate this algorithm.  the synthetic simulation should mirror your real data as closely as possible, including sample size, dimensionality, and ideally, parameters.  if also parameters, describe how you will estimate the parameters that you will use in this synthetic data analysis. 
-6. describe the real data in detail, including of course sample size and dimensionality, the space each dimension lives in (e.g., binary, categorical, ordinal, real, network, image, etc.) as well as any other properties that you deem important for understanding performance of various algorithms.
+3. Describe the evaluation criteria, including # of trials, metrics, visualizations, and/or summary statistics (as formally as you can) that you will be using to evaluate the performance of the algorithm. recall that the simulations will be samples from random variables, so running on a single sample will provide limited information, instead, run on many samples and visualize all the results.
+4. Describe in detail (as formally as you can) the synthetic simulation settings that you will be using to evaluate this algorithm.  the synthetic simulation should mirror your real data as closely as possible, including sample size, dimensionality, and ideally, parameters.  if also parameters, describe how you will estimate the parameters that you will use in this synthetic data analysis. 
 
 
 
