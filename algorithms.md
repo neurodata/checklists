@@ -34,22 +34,19 @@ The purpose of this section is twofold: (i) get comfortable running the algorith
 - **Hard data**: you believe the algorithm should perform relatively poorly, ideally because the noise statistics of the simulation are mismatched with the intuition/theory associated with the real data.
 - **Synthetic data**: everything, down to the exact data structures used, should match the exact format of the real data. In other words, the difference between running the algorithm on synthetic data and real data is that you merely call a different dataset.
 
-To generate each of these requires a parametric data model.  The difference between the easy and hard data are is merely the parameters, and in particular, merely the signal to noise ratio. For example, if we were evaluating a test on the difference between two populations, we could vary the difference of the means from very large (easy) to very small (hard).  More generally, one should describe a 1-dimensional parameter that one can vary to modulate the difficulty of the simulation.  The difference between the easy/hard data, and the synthetic data, is merely (1) sample size, (2) dimensionality, and (3) parameter settings.  In particular, these three properties should match the real data to the extent possible.  This way, when you run the analysis on the real data, the only thing that changes are the values 
+To generate each of these requires a parametric data model.  The difference between the easy and hard data are is merely the parameters, and in particular, merely the signal to noise ratio. For example, if we were evaluating a test on the difference between two populations, we could vary the difference of the means from very large (easy) to very small (hard).  More generally, one should describe a 1-dimensional parameter that one can vary to modulate the difficulty of the simulation.  The difference between the easy/hard data, and the synthetic data, is merely (1) sample size, (2) dimensionality, and (3) parameter settings.  In particular, these three properties should match the real data to the extent possible.  This way, when you run the analysis on the real data, the only thing that changes are the values of the arrays.
 
 
-I require that you do at least do easy data to obtain evidence suggesting your algorithm can work well sometimes, and i strongly recommend you also do synthetic data to confirm that your algorithm can perform at all on data like the real data. Typically, I think of a family of simulations, and I change a parameter so that 
+I require that you do at least do easy data to obtain evidence suggesting your algorithm can work well sometimes, and i strongly recommend you also do synthetic data to confirm that your algorithm can perform at all on data like the real data. I typically do a 1-dimensional parameter sweep to characterize the operating characteristics of the algorithm, and therefore understanding a bit about how I expect it to perform under a variety of settings. Regardless, for each setting, do the following:
 
 
+1. Write code to sample data from the model. 
+2. Write code to plot simulated data.
+3. Write the sample size, dimensionality, and parameter values for the current setting. 
+4. Plot simulated data, as raw as possible (ie, all observed variables, latent variables, and parameters) to obtain evidence that the simulation is working as expected.
 
-1. Write the sampling/generative distributions that you will write to test the code. the simulation should have the following properties:
-    1. you know exactly what the answer should be.  
-    2. you expect the algorithm to perform very well (because it is easy for a given sample size)
-1. write code to sample data from the above settings
-1. write code to plot simulated data
-2. plot simulated data, as raw as possible (ie, all observed variables, latent variables, and parameters)
-3. report whether it looks "right"
+Note that the first two steps are only required once, and can be re-used for each setting. Doing it this way reduces the bugs because the only thing that changes across settings are a few constants and parameters.
 
-Repeat steps 2-5 for a simulation setting for which the alg will *not* perform well (because it is difficult for a given sample size).  
 
 
 ### Analysis
