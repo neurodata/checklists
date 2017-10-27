@@ -2,38 +2,43 @@
 
 This is my continually evolving recommendation of the steps to take to build an understanding and intuition about an algorithm. The details of this protocol are constantly being revised on the basis of extremely valuable feedback.  If there is something you don't love about it, or have an idea to make it better, please [suggest it](https://github.com/neurodata/checklists/issues/new) and mention @jovo!  Recall the two most important principles of data science:
 
-1. [Look at it](https://www.youtube.com/watch?v=EF8GhC-T_Mo)
-2. [Keep it simple](https://youtu.be/DWKijJ9n-VQ?t=45s)
+- [**Look at it**](https://www.youtube.com/watch?v=EF8GhC-T_Mo)
+- [**Keep it simple**](https://youtu.be/DWKijJ9n-VQ?t=45s)
 
 The basic steps are listed below:
 
 1. Decide some stuff
-2. Simulate and analyze toy data
-3. Analyze and analyze synthetic data
-6. Analyze real data
-
-Note that sometimes the toy and synthetic simulation are the same, and sometimes the synthetic simulation data comes after real data. 
+2. Numerical experiments where truth is known (simulated data)
+3. Real data analysis
 
 
 ## Decisions 
 
-1. Plot a few samples of the raw data, as raw as possible (i.e. the whole multivariate time-series, rather than summary statistics), to justify the algorithm and simulation settings.
+1. Plot a few samples of the raw data to **look at them**, as raw as possible (i.e. the whole multivariate time-series, rather than summary statistics), to justify the algorithm and simulation settings. More figures is better.
 6. Describe the real data in detail, including of course sample size and dimensionality, the space each dimension lives in (e.g., binary, categorical, ordinal, real, network, image, etc.) as well as any other properties that you deem important for understanding performance of various algorithms.
-1. Name the precise algorithm will you be evaluating and provide a reference.
+1. Name the precise algorithm will you be evaluating and provide a reference where possible. If it is your own algorithm, is it the **simplest** possible algorithm that might work? If not, simplify.
 1. Write pseudocode (as formally as you can) for the algorithm.
-2. Describe in detail (as formally as you can) the toy simulation settings that you will be using to evaluate this algorithm. This should include at least two settings, one for which you suspect the algorithm will work well, and another for which you think it should not. To make any algorithm perform poorly simply requires changing the distribution of the *noise*,  e.g., k-means will not work if the clusters are centered around some means with non-spherically symmetric covariances.
+2. Describe in detail (as formally as you can) the **simplest** parametric model that you will be using to evaluate this algorithm. This model should have the property that you can change a 1 dimensional parameter to make vary the performance of your algorithm from very poor to very good.  For example,  e.g., k-means will not work if the clusters are centered around some means with non-spherically symmetric covariances. Therefore, a 1 dimensional parameter is the cross-correlation between variables for a 2-dimensional Gaussian mixture model setting, where both covariances are the same, and the priors are equal, and K=2.
 3. Describe the evaluation criteria, including # of trials, metrics, visualizations, and/or summary statistics (as formally as you can) that you will be using to evaluate the performance of the algorithm. recall that the simulations will be samples from random variables, so running on a single sample will provide limited information, instead, run on many samples and visualize all the results.
-4. Describe in detail (as formally as you can) the synthetic simulation settings that you will be using to evaluate this algorithm.  the synthetic simulation should mirror your real data as closely as possible, including sample size, dimensionality, and ideally, parameters.  if also parameters, describe how you will estimate the parameters that you will use in this synthetic data analysis. 
+4. [Reach] Describe in detail (as formally as you can) the synthetic simulation settings that you will be using to evaluate this algorithm.  The synthetic simulation should mirror your real data as closely as possible, including sample size, dimensionality, and ideally, parameters.  Describe how you will estimate the parameters from the real data that you will use in this synthetic data analysis. 
 
 
 
-## Toy Data
+## Numerical Experiments 
 
 ### Simulations
 
-The purpose of this section is twofold: (i) get comfortable running the algorithm, (ii) understand when you expect the algorithm to work well, and when not. Code should always be tested to determine whether we can trust the results, this means testing to see that it works well when it should, and that it does not work well when it shouldn't.  Below we describe how to generate such simulations so that you can use them to test the code.
+The purpose of this section is twofold: (i) get comfortable running the algorithm, (ii) understand when you expect the algorithm to work well, and when not. Code should always be tested to determine whether we can trust the results, this means testing to see that it works well when it should, and that it does not work well when it shouldn't.  
 
-1. write the sampling/generative distributions that you will write to test the code. the simulation should have the following properties:
+- **1 data**: you believe the algorithm should get essentially perfect accuracy.
+- **Hard data**: you believe the algorithm should perform relatively poorly, ideally because the noise statistics of the simulation are mismatched with the intuition/theory associated with the real data.
+- **Synthetic data**: everything, down to the exact data structures used, should match the exact format of the real data. In other words, the difference between running the algorithm on synthetic data and real data is that you merely call a different dataset.
+
+I require that you do at least do easy data to obtain evidence suggesting your algorithm can work well sometimes, and i strongly recommend you also do synthetic data to confirm that your algorithm can perform at all on data like the real data. Typically, I think of a family of simulations, and I change a parameter so that 
+
+
+
+1. Write the sampling/generative distributions that you will write to test the code. the simulation should have the following properties:
     1. you know exactly what the answer should be.  
     2. you expect the algorithm to perform very well (because it is easy for a given sample size)
 1. write code to sample data from the above settings
