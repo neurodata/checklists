@@ -5,6 +5,16 @@ This is my continually evolving recommendation of the steps to take to build an 
 1. [Look at it](https://www.youtube.com/watch?v=EF8GhC-T_Mo)
 2. [Keep it simple](https://youtu.be/DWKijJ9n-VQ?t=45s)
 
+The basic steps are listed below:
+
+1. Decide some stuff
+2. Simulate and analyze toy data
+3. Analyze and analyze synthetic data
+6. Analyze real data
+
+Note that sometimes the toy and synthetic simulation are the same, and sometimes the synthetic simulation data comes after real data. 
+
+
 ## Decisions 
 
 1. Plot a few samples of the raw data, as raw as possible (i.e. the whole multivariate time-series, rather than summary statistics), to justify the algorithm and simulation settings.
@@ -17,14 +27,11 @@ This is my continually evolving recommendation of the steps to take to build an 
 
 
 
-## Simulation
+## Toy Data
 
-The purpose of this section is twofold: (i) get comfortable running the algorithm, (ii) understand when you expect the algorithm to work well, and when not.
+### Simulations
 
-
-### Generate toy simulation data
-
-Code should always be tested to determine whether we can trust the results, this means testing to see that it works well when it should, and that it does not work well when it shouldn't.  Below we describe how to generate such simulations so that you can use them to test the code.
+The purpose of this section is twofold: (i) get comfortable running the algorithm, (ii) understand when you expect the algorithm to work well, and when not. Code should always be tested to determine whether we can trust the results, this means testing to see that it works well when it should, and that it does not work well when it shouldn't.  Below we describe how to generate such simulations so that you can use them to test the code.
 
 1. write the sampling/generative distributions that you will write to test the code. the simulation should have the following properties:
     1. you know exactly what the answer should be.  
@@ -37,7 +44,7 @@ Code should always be tested to determine whether we can trust the results, this
 Repeat steps 2-5 for a simulation setting for which the alg will *not* perform well (because it is difficult for a given sample size).  
 
 
-### Analyze toy simulation data
+### Analysis
 
 Here we actually test the code on the two above described settings.  Because the results are random, it is important to repeat the analysis multiple times.
 
@@ -56,7 +63,7 @@ For both the easy and difficult simulations:
 
 
 
-### Synthetic and Real Data Analysis
+## Simulate and Real Analysis
 
 Now run the algorithm with synthetic data in exactly the same format as our real inputs. Everything, down to the exact data structures used, should match the exact format of the real data. In this step, the researcher will think about how to best wrap their classes/methods so as to have as few moving parts as possible in the actual use of the algorithm.
 
