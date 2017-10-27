@@ -28,11 +28,14 @@ The basic steps are listed below:
 
 ### Simulations
 
-The purpose of this section is twofold: (i) get comfortable running the algorithm, (ii) understand when you expect the algorithm to work well, and when not. Code should always be tested to determine whether we can trust the results, this means testing to see that it works well when it should, and that it does not work well when it shouldn't.  
+The purpose of this section is twofold: (i) get comfortable running the algorithm, (ii) understand when you expect the algorithm to work well, and when not. Code should always be tested to determine whether we can trust the results, this means testing to see that it works well when it should, and that it does not work well when it shouldn't.  There are three important class of simulations:
 
-- **1 data**: you believe the algorithm should get essentially perfect accuracy.
+- **Easy data**: you believe the algorithm should get essentially perfect accuracy.
 - **Hard data**: you believe the algorithm should perform relatively poorly, ideally because the noise statistics of the simulation are mismatched with the intuition/theory associated with the real data.
 - **Synthetic data**: everything, down to the exact data structures used, should match the exact format of the real data. In other words, the difference between running the algorithm on synthetic data and real data is that you merely call a different dataset.
+
+To generate each of these requires a parametric data model.  The difference between the easy and hard data are is merely the parameters, and in particular, merely the signal to noise ratio. For example, if we were evaluating a test on the difference between two populations, we could vary the difference of the means from very large (easy) to very small (hard).  More generally, one should describe a 1-dimensional parameter that one can vary to modulate the difficulty of the simulation.  The difference between the easy/hard data, and the synthetic data, is merely (1) sample size, (2) dimensionality, and (3) parameter settings.  In particular, these three properties should match the real data to the extent possible.  This way, when you run the analysis on the real data, the only thing that changes are the values 
+
 
 I require that you do at least do easy data to obtain evidence suggesting your algorithm can work well sometimes, and i strongly recommend you also do synthetic data to confirm that your algorithm can perform at all on data like the real data. Typically, I think of a family of simulations, and I change a parameter so that 
 
