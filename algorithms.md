@@ -51,11 +51,14 @@ Note that the first two steps are only required once, and can be re-used for eac
 
 ### Analysis
 
-Here we actually test the code on the two above described settings.  Because the results are random, it is important to repeat the analysis multiple times.
+Here we actually test the algorithm on the various settings.  Because the results are random, it is important to repeat the analysis multiple times. Note that we want to understand performance on simulated data, to help understand performance on real data. There are two different scenarios of interest for real data: 
 
-Note that we want to understand performance on simulated data, to help understand performance on real data. There are two different scenarios of interest for real data: (i) those for which we are given a gold standard answer (often called the "truth", but even more often is a noisy estimate of the truth, if the truth even exists), and (ii) those for which no gold standard is available. For case (i), for predictions, when possible do 10-fold cross-validation.  For case (ii), there are two natural options.  If the algorithm is optimizing some objective function, we can compare the objective function before and after analysis, to confirm that it is going in the right direction.  However, sometimes it is not doing that, in which case, we can instead compute  "discriminability" (see [repo](https://github.com/neurodata/discriminability), [tutorial](http://docs.neurodata.io/checklists/Tutorials/R/Discriminability/discriminability_tutorial.html)).  In particular, given multiple measurements from multiple samples, compute how relatively similar the measurements from the same sample are, both before and after applying the algorithm.  If the algorithm is useful, it should increase discriminability.
+- Those for which we are given a *gold standard* answer (often called the "truth", but even more often is a noisy estimate of the truth, if the truth even exists).  For these, we typically do a 10-fold cross-validation to assess performance and choose parameters. 
+- Those for which no gold standard is available, in which case there two natural options:  
+    - If the algorithm is optimizing some objective function, we can compare the objective function before and after analysis, to confirm that it is going in the right direction.  
+    - If we have multiple measurements from the same subject or class,  we can instead compute  "discriminability" (see [repo](https://github.com/neurodata/discriminability), [tutorial](http://docs.neurodata.io/checklists/Tutorials/R/Discriminability/discriminability_tutorial.html)).  
 
-For both the easy and difficult simulations:
+Regardless of the setting, the analysis follows the following steps:
 
 1. Do the following ~10x times:
     1. generate & plot simulated data
@@ -68,19 +71,16 @@ For both the easy and difficult simulations:
 
 
 
-## Simulate and Real Analysis
+## Real Analysis
 
-Now run the algorithm with synthetic data in exactly the same format as our real inputs. Everything, down to the exact data structures used, should match the exact format of the real data. In this step, the researcher will think about how to best wrap their classes/methods so as to have as few moving parts as possible in the actual use of the algorithm.
+Now run the algorithm with synthetic data in exactly the same format as our real inputs. Everything, down to the exact data structures used, should match the exact format of the real data. In this step, the researcher will think about how to best wrap their classes/methods so as to have as few moving parts as possible in the actual use of the algorithm.  I strongly recommend steps 2 & 3 below.
 
-1. describe (as formally as you can) the synthetic simulation (this should merely be a change in sample size, dimensionality, and parameter values.
-1. plot synthetic raw data, exactly as you have for the real data to visually compare.
-1. write a function that calls the algorithm, accepting as inputs: (i) raw data and (ii) algorithmic parameters.
-1. call function using synthetic data. 
-1. generate plots to verify that the algorithm performs as expected on the synthetic data, using the same metrics & visualizations as for the toy data.
+1. Write a function that calls the algorithm, accepting as inputs: (i) raw data and (ii) algorithmic parameters.
+1. Call function using synthetic data. 
+1. Generate plots to verify that the algorithm performs as expected on the synthetic data, using the same metrics & visualizations that you will on the real data.
+2. Run *exact same code* on real data as ran on synthetic, generating estimates, qualitative and quantitative results. 
 
-After the synthetic data step, the time to adapt to real data should be minutes, as theoretically the only thing that will need to be done is accepting the real data as input at this point. The rest should entirely be "plug and play" with the exact code used for the synthetic dataset:
-
-6. run *exact same code* on real data as ran on synthetic, generating estimates, qualitative and quantitative results. 
+Note that after the synthetic data step, the time to adapt to real data should be minutes, as theoretically the only thing that will need to be done is accepting the real data as input at this point. The rest should entirely be "plug and play" with the exact code used for the synthetic dataset.
 
 
 Running algorithms is an art.  just because you can successfully reproduce somebody else's previous results, does *not* mean that you have mastered the art of running the algorithm.  In particuar, all algorithms have a number of exposed or hidden parameters, including for example convergence criteria.  By nature, authors of algorithms set default values of these appropriate for their applications, on their data and hardware.  So, failure to achieve good results using standard methods on problems for which they "ought" to do well often reflects failure of mastery of the algorithm, rather than the algorithm itself.  
