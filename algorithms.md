@@ -69,7 +69,7 @@ Now run the algorithm with synthetic data in exactly the same format as our real
 
 After the synthetic data step, the time to adapt to real data should be minutes, as theoretically the only thing that will need to be done is accepting the real data as input at this point. The rest should entirely be "plug and play" with the exact code used for the synthetic dataset:
 
-4. run *exact same code* on real data as ran on synthetic, generating estimates, qualitative and quantitative results. 
+6. run *exact same code* on real data as ran on synthetic, generating estimates, qualitative and quantitative results. 
 
 
 Running algorithms is an art.  just because you can successfully reproduce somebody else's previous results, does *not* mean that you have mastered the art of running the algorithm.  In particuar, all algorithms have a number of exposed or hidden parameters, including for example convergence criteria.  By nature, authors of algorithms set default values of these appropriate for their applications, on their data and hardware.  So, failure to achieve good results using standard methods on problems for which they "ought" to do well often reflects failure of mastery of the algorithm, rather than the algorithm itself.  
