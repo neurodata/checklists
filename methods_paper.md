@@ -35,8 +35,6 @@ Some of these might be implicit, although it is better to make them explicit.  F
 
 ## results
 
-(for this alg and reference algs)
-
 ### Why would it work well?
 
 1. Describe the geometric intuition (in ~1 paragraph) as to why this algorithm should work well under certain contexts/s settings,  include if possible:
