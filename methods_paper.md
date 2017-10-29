@@ -10,11 +10,11 @@ a good methods paper is organized by and has the components:
 1. describe the statistical goal formally, for example, `H0: F=G` vs. `HA: F != G`
 
 1. state the theoretical statistical and computational desiderata of the method, potentially including
-  - unbiased under model M
-  - consistent under model M
-  - robustness under model misspecification M'
-  - efficient (or relatively efficient) under model M in terms of both sample size (n) and "intrinsic" (d) and/or ambient (p) dimensionality
-  - asymptotic computational space and time complexity in terms of n, p, d
+    - unbiased under model M
+    - consistent under model M
+    - robustness under model misspecification M'
+    - efficient (or relatively efficient) under model M in terms of both sample size (n) and "intrinsic" (d) and/or ambient (p) dimensionality
+    - asymptotic computational space and time complexity in terms of n, p, d
 
 
 ### approach
