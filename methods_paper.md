@@ -6,23 +6,25 @@ a good methods paper is organized by and has the components:
 
 ### setting
 
-1. state the task verbally and formally.  for example, we are given n samples in R^d, and we want to estimate a density.
-1. state the loss function verbally and formally. for example, 0-1 loss, $\ell: \mathcal{X} - \mathcal{Y}$, $\ell(g(x),y)=0$ iff $g(x)==y$.  
-1. state the statistical goal verbally and formally. for example, minimize expected loss amongst the set of classifiers that take a particular form, $\argmin_{g \in \mathcal{G}} \mathbb{E}_F  || g(x) - y ||$, where the expectation is taken with respect to the join distribution, $F_{XY}$.  
-  1. explain the statistical goal in words.  this almost always means either obtaining a test with high power, 
-or an estimator with low expected loss, or a decision process with low regret.  ideally, this is stated using statistical decision theoretical language.
-  1. formally write down the goal (using equations).
-1. state the computational goal.  for example, worst case performance requires quadratic space and time in sample size, and linear in dimension.
-1. state the additional desiderata of the method: [here](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md) is a list of algorithm properties.  the desiderata should typically be particular goals for a subset of these properties.
+1. describe the task colloqiually, for example, we are developing a nonparametric 2-sample test.
+1. describe the statistical goal formally, for example, 
+
+H0: F=G
+HA: F != G
+
+1. state the theoretical statistical and computational desiderata of the method, potentially including
+  - unbiased under model M
+  - consistent under model M
+  - robustness under model misspecification M'
+  - efficient (or relatively efficient) under model M in terms of both sample size (n) and "intrinsic" (d) and/or ambient (p) dimensionality
+  - asymptotic computational space and time complexity in terms of n, p, d
+
 
 ### approach
 
-1. state the algorithm: 
-  1. one paragraph high-level description of algorithm 
-  1. pseudocode. input must include all hyper-parameters.
-1. evaluation
-  1. state how we will quantitatively evaluate performance in simulations (e.g., generating test data)
-  1. state how we will quantitatively evaluate performance in real data (e.g., 10-fold cross-validation)
+1. describe the algorithm colloqiually, in ~1 paragraph, ideally with schematic illustration 
+2. write pseudocode as clearly and compeltely as you can, including all inputs and hyper-parameters.
+1. describe the all evaulation criteria/metrics as clearly as you can.
   
 
 ## results
@@ -31,17 +33,15 @@ or an estimator with low expected loss, or a decision process with low regret.  
 
 ### Why would it work well?
 
-1. write a paragraph providing geometric intuition as to why this algorithm should work well under certain contexts/s settings, which includes writing which contexts you think it should work well.  include if possible:
-  1. (all) the settings under which algorithm can get the right answer
-  1. (all) the settings under which algorithm is guaranteed to get the right answer
+1. Describe the geometric intuition (in ~1 paragraph) as to why this algorithm should work well under certain contexts/s settings,  include if possible:
+  1. (all) the settings under which algorithm *could possibly* get the right answer
+  1. (all) the settings under which algorithm *is guaranteed* to get the right answer
 1. Support this geometic intuition with concrete simulated examples, in particular: 
   1. positive illustrative example: 
-    1. write (verbally and formally) the generating distribution of data under which we expect the algorithm to perform well. ideally, in the introduction of the manuscript we've already explained that there is a **gap** that we are filling, so this simulation should demonstrate that this method fills this gap, and also illustrate that the other methdos fail here. 
-    1. a figure illustrating that the method achieves the goal in the setting.  note that this figure should clearly indicate the simulated truth and the error of the algorithm. compare to reference algs.
+    1. describe the generating distribution of data under which we expect the algorithm to perform well. ideally, in the introduction of the manuscript we've already explained that there is a **gap** that we are filling, so this simulation should demonstrate that this method fills this gap, and also illustrate that the other methdos fail here. 
+    1. a figure illustrating that the method achieves the goal in the setting.  note that this figure should clearly indicate the simulated truth and the quantitative error of the algorithm. compare to reference algs.
   1. negative illustrative example: same deal, but this time, illustrating that it does not work much worse than other algorithms in settings for which we expect it not to do better. compare to reference algs.
-1. prove theoretical properties about method, both statistical and computational. 
-    1. this means provide theoretical guarantees of performance along >=1 of the desired properties from [here](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md). 
-    1. this includes proving when it is (and is not) optimal.
+1. [Optional] prove theoretical properties about method (listed above), both statistical and computational, both when it is optimal, and even better also when it is not.
 
 
 ### How well does it work?
