@@ -7,10 +7,7 @@ a good methods paper is organized by and has the components:
 ### setting
 
 1. describe the task colloqiually, for example, we are developing a nonparametric 2-sample test.
-1. describe the statistical goal formally, for example, 
-
-H0: F=G
-HA: F != G
+1. describe the statistical goal formally, for example, `H0: F=G` vs. `HA: F != G`
 
 1. state the theoretical statistical and computational desiderata of the method, potentially including
   - unbiased under model M
