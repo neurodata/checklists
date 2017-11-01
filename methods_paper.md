@@ -1,4 +1,6 @@
-a good methods paper is organized by and has the components:
+A good methods paper is organized by and has the components listed below.
+For a reasonable example, see my [signal subgraph paper](http://ieeexplore.ieee.org/document/6341752/), or see [markdown demo](https://github.com/neurodata/checklists/blob/master/Tutorials/MATLAB/algs_example/methods_paper_example.md) for a quickie alpha version.
+
 
 
 
@@ -43,16 +45,14 @@ answer
 ### Empericial Properties
 
 
- 1. Describe (in words and equations) simulated example that demonstrates that the above intuitions hold empirically as well (this might be the above positive example).  
-1. Run algorithm on >=10x trials, compute metric, plot distribution of metrics.
+1. Describe (in words and equations) simulated example that demonstrates that the above intuitions hold empirically as well (this might be the above positive example).  
+    1. Run algorithm on >=10x trials, compute metric, plot distribution of metrics.
 1. If the theory makes distributional assumptions, describe (in words and equations) simulations that extend beyond the limitations of the theory.
-1. Run alg as before.
-
-
+    1. Run alg as before.
 1. real data examples: 
-  1. describe >=1 real data examples (ideally, use examples that previous authors have used to enable a fair comparison).
-  1. run algs on real data, plot results that demonstrate that the performance also improves performance on real data examples, relative to previously existing tools.
-  1. plot/state run time for each alg.
+    1. describe >=1 real data examples (ideally, use examples that previous authors have used to enable a fair comparison).
+    1. run algs on real data, plot results that demonstrate that the performance also improves performance on real data examples, relative to previously existing tools.
+    1. plot/state run time for each alg.
 1. synthetic data analysis: generate data as close to real data as possible, and run same analysis, to assess the degree of credance we lend to the results on the real data.
 
 
@@ -63,10 +63,9 @@ answer
 
 
 
-### Implementation Properties
+### Additional Properties
 
 
-Make a table of [pragmatic algorithm properties](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md#pragmatic-properties). Columns are properties, rows are algorithms.
+Describe this method in terms of the [algorithm properties](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md) that haven't yet been covered. 
 
 
-for a reasonable example, see my [signal subgraph paper](http://ieeexplore.ieee.org/document/6341752/), or see [markdown demo](https://github.com/neurodata/checklists/blob/master/Tutorials/MATLAB/algs_example/methods_paper_example.md) for a quickie alpha version.
