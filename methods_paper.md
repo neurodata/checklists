@@ -6,27 +6,37 @@ For a reasonable example, see my [signal subgraph paper](http://ieeexplore.ieee.
 
 ## Methods
 
+
+
+
 ### Setting
 
 1. Task: Describe the task colloqiually, for example, we are developing a nonparametric 2-sample test.
 1. Desiderata: State the desiderata of the method, [algorithm_properties] contains a good list.
 1. Goal: Describe the statistical goal formally. Note that the statistical goal is defined by the constituents of Statistical Decision Theory, listed below. Some of these might be implicit, although it is better to make them explicit.  For example,  `H0: F=G` vs. `HA: F != G` is a good start for 2-sample testing, but then we must also know that `X ~ F`, what space does `X` live in?  Also, what statistical model do `F` and `G` live in? Gaussian? The loss for hypothesis testing is 0-1, and the risk is almost always to maximize power under a given critical value.    
-    1. sample space, 
+    1. sample space,
     2. action space, 
-    3. statistical model under consideration 
+    3. statistical model under consideration, 
     4. loss function, 
     5. decision rule(s) under consideration, 
     6. risk functional.
 4. Background: Describe all the background material required to understand the proposed approach.
 
 
+#### Notation:
+
+- M = statistical model
+- n = sample size
+- p = observed dimensionality
+- d = intrinsic dimensionality
+- T = # threads
 
 
 ### Approach
 
-1. describe the algorithm colloqiually, in ~1 paragraph, ideally with schematic illustration 
-2. write pseudocode as clearly and compeltely as you can, including all inputs and hyper-parameters.
-1. describe the all evaulation criteria/metrics as clearly as you can.
+1. Approach: Describe the algorithm colloqiually, in ~1 paragraph, ideally with schematic illustration 
+2. Pseudocode: Write pseudocode as clearly and compeltely as you can, including all inputs and hyper-parameters.
+1. Metrics: Describe the all evaulation criteria/metrics as clearly as you can.
   
 
 ## Results
@@ -40,31 +50,48 @@ answer
 1. Provide an figure illustrating that the method achieves the goal in the setting.  Note that this figure should clearly indicate the simulated truth/optimal and the quantitative error of the algorithm, and compare to reference algs.
 
 
+### Theoretical  Properties
+
+#### Statistical Properties
+
+**Prove** (or comment on the difficulty of proving) each of the below properties:
+1. unbiasedness under M
+2. consistency (or dominance) under M
+3. robustness under misspecification M'
+4. efficiency (or relatively efficiency) under model M in terms of n, p, and d. 
+5. hyper-parameterness: the # of and ease of estimating them
+
+
+
+
+#### Computational Properties
+
+1. **Provide/proof** worst case computational space and time requirements as a function of n, p, and possibly d  and T.  When appropriate, also include other model parameters such as K (# of clusters) or d' (# of dimensions embedded into), etc. 
+    1. For supervised methods, provide the above for both training and **testing**.
+
+
 
 
 ### Empericial Properties
 
 
-1. Describe (in words and equations) simulated example that demonstrates that the above intuitions hold empirically as well (this might be the above positive example).  
-    1. Run algorithm on >=10x trials, compute metric, plot distribution of metrics.
-1. If the theory makes distributional assumptions, describe (in words and equations) simulations that extend beyond the limitations of the theory.
-    1. Run alg as before.
-1. real data examples: 
-    1. describe >=1 real data examples (ideally, use examples that previous authors have used to enable a fair comparison).
-    1. run algs on real data, plot results that demonstrate that the performance also improves performance on real data examples, relative to previously existing tools.
-    1. plot/state run time for each alg.
-1. synthetic data analysis: generate data as close to real data as possible, and run same analysis, to assess the degree of credance we lend to the results on the real data.
-
-
-### Theoretical Properties
-
-1. Prove statistical theoretical properties about method (listed above), for when it is optimal/better than reference methods, and even better, also when it is not.
-1. Provide worst case computational space and time requirements as a function of n & p, and possibly T (# of threads), and other data parameters such as K (# of cluster), d (# of dimensions embedded into), etc., for training, and possibly testing.
+1. **Describe** (in words and equations) simulated examples that demonstrates that the above intuitions hold empirically as well (this might be the above positive example).  Ideally this is a simulation benchmark suite that spans the interesting space of different values for {n,p,d}.
+    1. **Run** algorithm on >=10x trials, compute metrics, plot distribution of metrics.
+1. If the theory makes distributional assumptions, **describe** (in words and equations) simulations that extend beyond the limitations of the theory.
+    1. **Run** alg as above.
+1. [Computational Properties]:
+    1. time & space for training & testing
+    2. scale up & scale out
+1. **Real Data** examples: 
+    1. **Describe** >=1 real data examples (ideally, use a benchmark suite that previous authors have used to enable a fair comparison).
+    1. **Run** algs on real data, plot results that demonstrate that the performance also improves performance on real data examples, relative to previously existing tools.
+    1. **Plot/State** computational properties for each alg on real data.
+1. **Synthetic Data Analysis**: Generate data as close to real data as possible, and run same analysis, to assess the degree of credance we lend to the results on the real data.
 
 
 
-### Additional Properties
 
+### Implementational Properties
 
 Describe this method in terms of the [algorithm properties](https://github.com/neurodata/checklists/blob/master/algorithm_properties.md) that haven't yet been covered. 
 
