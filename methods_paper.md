@@ -6,17 +6,17 @@ a good methods paper is organized by and has the components:
 
 ### Setting
 
-1. describe the task colloqiually, for example, we are developing a nonparametric 2-sample test.
-1. state the desiderata of the method, [algorithm_properties] contains a good list.
-1. describe the statistical goal formally. Note that the statistical goal is defined by: 
+1. Task: Describe the task colloqiually, for example, we are developing a nonparametric 2-sample test.
+1. Desiderata: State the desiderata of the method, [algorithm_properties] contains a good list.
+1. Goal: Describe the statistical goal formally. Note that the statistical goal is defined by the constituents of Statistical Decision Theory, listed below. Some of these might be implicit, although it is better to make them explicit.  For example,  `H0: F=G` vs. `HA: F != G` is a good start for 2-sample testing, but then we must also know that `X ~ F`, what space does `X` live in?  Also, what statistical model do `F` and `G` live in? Gaussian? The loss for hypothesis testing is 0-1, and the risk is almost always to maximize power under a given critical value.    
     1. sample space, 
     2. action space, 
     3. statistical model under consideration 
     4. loss function, 
     5. decision rule(s) under consideration, 
     6. risk functional.
+4. Background: Describe all the background material required to understand the proposed approach.
 
-Some of these might be implicit, although it is better to make them explicit.  For example,  `H0: F=G` vs. `HA: F != G` is a good start for 2-sample testing, but then we must also know that `X ~ F`, what space does `X` live in?  Also, what statistical model do `F` and `G` live in? Gaussian? The loss for hypothesis testing is 0-1, and the risk is almost always to maximize power under a given critical value.    
 
 
 
