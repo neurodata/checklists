@@ -9,7 +9,7 @@ For a reasonable example, see my [signal subgraph paper](http://ieeexplore.ieee.
 
 
 
-### Setting
+### Setup
 
 
 #### Notation:
@@ -25,6 +25,7 @@ For a reasonable example, see my [signal subgraph paper](http://ieeexplore.ieee.
 - K = # classes / clusters
 - F = density, f = probability distribution/mass function
 
+#### Setting
 
 1. Task: Describe the task colloqiually, for example, we are developing a nonparametric 2-sample test.
 1. Desiderata: State the desiderata of the method, [algorithm_properties] contains a good list.
