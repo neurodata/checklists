@@ -75,8 +75,7 @@ answer
 
 #### Computational Properties
 
-1. **Provide/proof** worst case computational space and time requirements as a function of n, p, and possibly d  and T.  When appropriate, also include other model parameters such as K (# of clusters) or d' (# of dimensions embedded into), etc. 
-    1. For supervised methods, provide the above for both training and **testing**.
+**Provide/prove** worst case computational space and time requirements as a function of n, p, and possibly d  and T.  When appropriate, also include other model parameters such as K (# of clusters) or d' (# of dimensions embedded into), etc.  For supervised methods, provide the above for both training and **testing**.
 
 
 
