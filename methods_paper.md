@@ -32,7 +32,7 @@ For a reasonable example, see my [signal subgraph paper](http://ieeexplore.ieee.
 1. **Goal**: Describe the statistical goal formally. Note that the statistical goal is defined by the constituents of Statistical Decision Theory, listed below. Some of these might be implicit, although it is better to make them explicit.  For example,  `H0: F=G` vs. `HA: F != G` is a good start for 2-sample testing, but then we must also know that `X ~ F`, what space does `X` live in?  Also, what statistical model do `F` and `G` live in? Gaussian? The loss for hypothesis testing is 0-1, and the risk is almost always to maximize power under a given critical value.    
     1. sample space, `\Xi`
     2. action space, `\mathcal{A}`
-    3. statistical model under consideration, \mathcal{M}`
+    3. statistical model under consideration, `\mathcal{M}`
     4. loss function, `\ell`
     5. decision rule(s) under consideration, `\delta`
     6. risk functional, `\mathbb{R}`.
