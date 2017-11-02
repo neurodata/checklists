@@ -7,12 +7,10 @@ For a reasonable example, see my [signal subgraph paper](http://ieeexplore.ieee.
 ## Methods
 
 
-
-
 ### Setup
 
 
-#### Notation:
+#### Suggested Notation:
 
 - n = sample size
 - p = observed dimensionality
@@ -64,19 +62,22 @@ answer
 
 #### Statistical Properties
 
-**Prove** (or comment on the difficulty of proving) each of the below properties:
-1. unbiasedness under M
-2. consistency (or dominance) under M
-3. robustness under misspecification M'
-4. efficiency (or relatively efficiency) under model M in terms of n, p, and d.
-5. hyper-parameterness: the # of and ease of estimating them
-
+1. **Prove** (or comment on the difficulty of proving) each of the below foundational properties:
+    1. unbiasedness under M
+    2. consistency (or dominance) under M
+    3. robustness under misspecification M'
+    4. efficiency (or relatively efficiency) under model M in terms of n, p, and d.
+2. **Prove** (or comment on the difficulty of proving) any additional properties that you desire of your estimator, eg, non-negativity.
+3. **Discuss** the hyper-parameters of your estimator, including
+    1. the # of hyper-parameters
+    2. ease of estimating them (e.g., are they nested (like in PCA) or not (like k-means)).
 
 
 
 #### Computational Properties
 
-**Provide/prove** worst case computational space and time requirements as a function of n, p, and possibly d  and T.  When appropriate, also include other model parameters such as K (# of clusters) or d' (# of dimensions embedded into), etc.  For supervised methods, provide the above for both training and *testing*.
+1. **State/prove** worst case computational *time* requirements as a function of n, p, and possibly d  and T.  When appropriate, also include other model parameters such as K (# of clusters) or d' (# of dimensions embedded into), etc.  For supervised methods, provide the above for both training and *testing*.
+2. **Sampe** for *space*
 
 
 
