@@ -27,13 +27,7 @@ For a reasonable example, see my [signal subgraph paper](http://ieeexplore.ieee.
 
 1. **Task**: Describe the task colloqiually, for example, we are developing a nonparametric 2-sample test.
 1. **Desiderata**: State the desiderata of the method, [algorithm_properties] contains a good list.
-1. **Goal**: Describe the statistical goal formally. Note that the statistical goal is defined by the constituents of Statistical Decision Theory, listed below. Some of these might be implicit, although it is better to make them explicit.  For example,  `H0: F=G` vs. `HA: F != G` is a good start for 2-sample testing, but then we must also know that `X ~ F`, what space does `X` live in?  Also, what statistical model do `F` and `G` live in? Gaussian? The loss for hypothesis testing is 0-1, and the risk is almost always to maximize power under a given critical value.    
-    1. sample space, `\Xi`
-    2. action space, `\mathcal{A}`
-    3. statistical model under consideration, `\mathcal{M}`
-    4. loss function, `\ell`
-    5. decision rule(s) under consideration, `\delta`
-    6. risk functional, `\mathbb{R}`.
+1. **Goal**: Describe the statistical goal formally. Note that the statistical goal can be estimation, testing, prediction, etc.  For example,  `H0: F=G` vs. `HA: F != G` is a good start for 2-sample testing, but then we must also know that `X ~ F`, what space does `X` live in?  Also, what statistical model do `F` and `G` live in? Gaussian?
 4. **Background**: Describe all the background material required to understand the proposed approach.
 
 
@@ -87,7 +81,7 @@ answer
 
 #### Simulated Data Analysis
 
-1. **Describe** (in words and equations) simulated examples that demonstrates that the above intuitions hold empirically as well (this might be the above positive example).  Ideally this is a simulation benchmark suite that spans the interesting space of different values for {n,p,d}.
+1. **Describe** (in words and equations) simulated examples that demonstrates that the above intuitions hold empirically as well (this might be the above positive example).  Ideally this is a simulation benchmark suite that spans the interesting space of different values for {n,p,d}. Note that for testing, it is important to characterize both power and false positive rate.
 1. **Plot** the results in terms of the previously described metrics, having run on >=10x trials to obtain means and standard errors of performance. Note that these are *plots*, not tables.
 1. [If the theory makes distributional assumptions]
     1. **Describe** (in words and equations) simulations that extend beyond the limitations of the theory.
@@ -100,10 +94,9 @@ answer
 #### Real Data Analysis:
 
 1. **Describe** >=1 real data examples (ideally, use a benchmark suite that previous authors have used to enable a fair comparison).
-1. **Plot** results that demonstrate on real data that which you demonstrated on simulated data. Note that this is *not* a place to introduce a new metric, rather, each metric/analysis should also be applied to simulated data prior to its use on real data.
+1. **Plot** results that demonstrate on real data that which you demonstrated on simulated data. Note that each metric/analysis should also be applied to simulated data prior to its use on real data.
 1. **Plot/State** computational properties on real data.
 1. **Synthetic Data Analysis**: Generate data as close to real data as possible, and run same analysis, to assess the degree of credence we lend to the results on the real data.
-
 
 
 
