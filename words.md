@@ -16,17 +16,17 @@ check for these words, and remove/replace as appropriate
 13. essential/necessary --> probably remove, things are essential/necessary only in very special cases, eg, logic; otherwise, we probably just aren't creative enough. you might mean useful.
 13. no way / impossible --> it might be possible, we just have not yet been sufficiently creative to think of it.
 14. done --> completed.
-15. used --> utilized
-16. firstly --> first
+15. utilized --> used
+16. firstly --> first, and similarly for second, third, etc.
 17. & --> and
 18. when explicitly referring to a reference, use citet{Blah}
 19. arguably --> possibly, likely, perhaps
-11. usually --> same deal, either provide a citation/evidence, or don't say it
+11. usually --> same deal, either provide a citation/evidence, or don't say it, replace with "frequently"
 21. as such --> ok sparsely, but often overused, check and revise sentences.
 22. numbers have space before unit, eg 1GB --> 1 GB.
 23. first --> somebody reading this will think they did it first, and they are at least partially correct. firstness should be implied by context.
 24. in this manuscript --> nothing, it is implied.
 25. a priori --> should be italics
 1. we want to --> we (though should be reworded to avoid "we" entirely)
-1. Fig, Fig., fig --> Figure
+1. Fig, Fig., fig --> Figure (or at least be consistent)
 1. we chose appropriate --> we chose (let them decide whether it was appropriate)
