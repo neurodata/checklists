@@ -28,6 +28,7 @@ check for these words, and remove/replace as appropriate
 24. in this manuscript --> nothing, it is implied.
 25. a priori --> should be italics
 26. is used --> rewrite sentence, avoid passive tense whenver possible
+27. can be seen --> typically just remove, sometimes reword sentences
 1. we want to --> we (though should be reworded to avoid "we" entirely)
 1. Fig, Fig., fig --> Figure (or at least be consistent)
 1. we chose appropriate --> we chose (let them decide whether it was appropriate)
