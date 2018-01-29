@@ -32,3 +32,4 @@ check for these words, and remove/replace as appropriate
 1. we want to --> we (though should be reworded to avoid "we" entirely)
 1. Fig, Fig., fig --> Figure (or at least be consistent)
 1. we chose appropriate --> we chose (let them decide whether it was appropriate)
+1. "note that" or "we note that" --> simply remove.
