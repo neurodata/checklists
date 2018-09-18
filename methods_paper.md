@@ -18,7 +18,7 @@ For a reasonable example, see my [signal subgraph paper](http://ieeexplore.ieee.
 - q = # of dimensions embedded into
 - T = # threads
 - x = sample realization, X = random variable
-- x = scalar, **x** = vector/matrix
+- x = scalar, **x** = vector, **X** = matrix
 - i = indexes samples
 - K = # classes / clusters
 - F = density, f = probability distribution/mass function
