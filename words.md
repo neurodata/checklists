@@ -7,7 +7,7 @@ check for these words, and remove/replace as appropriate
 2. i, we, our, us, you, your --> rewrite sentence (almost always)
 3. in order to/for --> to/for
 4. clearly, obviously --> remove, might not be so clear/obvious to everyone
-5. this, it --> be specific,  can often be vague to which noun this/it is referring
+5. this, they, it --> be specific,  can often be vague to which noun this/they/it is referring
 6. very --> use a stronger adjective/adverb
 8. data is --> data are
 9. novel --> remove,  novelty should be implied by context, if it is not clear by context, update context
